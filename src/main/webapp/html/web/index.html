@@ -1,0 +1,1624 @@
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>铭飞MCms</title>
+  <meta http-equiv="content-type" content="text/html">
+  <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+  <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,width=device-width">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="app-mobile-web-app-capable" content="yes">
+  <meta name="app-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="keywords" content="铭飞MCMS">
+  <meta name="description" content="铭飞MCMS">
+  <script type="text/javascript" src="http://localhost:8080/static/plugins/vue/2.6.9/vue.min.js"></script> 
+  <link rel="stylesheet" href="http://localhost:8080/static/plugins/minireset/0.0.2/minireset.min.css"> 
+  <link rel="stylesheet" href="https://cdn.mingsoft.net/iconfont/iconfont.css"> 
+  <link rel="stylesheet" href="http://localhost:8080/static/plugins/animate/4.1.0/animate.min.css"> 
+  <script src="http://localhost:8080/static/plugins/element-ui/2.12.0/index.js"></script> 
+  <link rel="stylesheet" href="http://localhost:8080/static/plugins/element-ui/2.12.0/index.css"> 
+  <link rel="stylesheet" href="http://localhost:8080/template/1/default/css/app.css">
+  <!--网络请求框架--> 
+  <script src="http://localhost:8080/static/plugins/axios/0.18.0/axios.min.js"></script> 
+  <script src="http://localhost:8080/static/plugins/qs/6.6.0/qs.min.js"></script> 
+  <script src="http://localhost:8080/static/plugins/ms/1.0.0/ms.js"></script> 
+  <script src="http://localhost:8080/static/plugins/ms/1.0.0/ms.http.js"></script> 
+  <script src="http://localhost:8080/static/plugins/ms/1.0.0/ms.util.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@4.5.1/dist/js/swiper.min.js"></script> 
+  <script>
+SwiperClass = Swiper
+</script> 
+  <script src="https://cdn.jsdelivr.net/npm/vue-awesome-swiper@4.1.1/dist/vue-awesome-swiper.min.js"></script> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@5.4.5/css/swiper.min.css"> 
+  <script>
+// Vue.use(VueAwesomeSwiper)
+</script>
+
+
+<!--  bootstrap-->
+  <!-- 新 Bootstrap 核心 CSS 文件 -->
+  <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+  <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+  <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+  <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+  <!--  bootstrap-->
+
+
+<!--  引入soe首页css-->
+  <link  rel="stylesheet" href="http://localhost:8080/template/1/default/css/soe/css/all.css">
+  <link  rel="stylesheet" href="http://localhost:8080/template/1/default/css/soe/css/css.css">
+  <link  rel="stylesheet" href="http://localhost:8080/template/1/default/css/soe/css/normalize.min.css">
+  <link  rel="stylesheet" href="http://localhost:8080/template/1/default/css/soe/css/style.css">
+<!--  引入soe首页css-->
+  <style>
+:root {
+    --swiper-theme-color:$ {
+        component.config.color.value
+    }
+
+    ;
+}
+
+</style> 
+  <script>
+        ms.base = "";
+    </script> 
+  <style>
+        [v-cloak]{
+            display: none;
+        }
+    </style> 
+ </head> 
+ <body>
+  <div id="app" v-cloak>
+<!--   <div class="ms-nav">
+ <div class="body"> 
+  <div class="logo">
+   <a href="http://localhost:8080">
+   <img title="" alt="" src="http://localhost:8080//upload/1/appLogo/1609397756549.png" class="logo-pic">
+   <img title="" alt="" src="https://www.mingsoft.net//template/1/ms/images/1596437934982.png" class="logo-desc">
+   </a>
+  </div>
+  <div @click="switchShow([&quot;1605172743000_96378&quot;]);" class="nav-h5">
+   <i class="iconfont icon-caidan nav-h5-icon"></i> 
+   <div id="key_1605172743000_96378" class="nav-h5-body" style="display: none">
+    <a href="http://localhost:8080" class="nav-h5-item"> 首页 </a>
+    <a href=" class="nav-h5-item ">
+     团队介绍
+    </a>
+    <a href=" class="nav-h5-item ">
+     科研项目
+    </a>
+    <a href=" class="nav-h5-item ">
+     论文著作
+    </a>
+    <a href=" class="nav-h5-item ">
+     团队动态
+    </a>
+    <a href=" class="nav-h5-item ">
+     团队成员
+    </a>
+    <a href=" class="nav-h5-item ">
+     联系我们
+    </a>
+   </div> 
+  </div> 
+  <div class="nav-item">
+   <a href="http://localhost:8080" class="item"> 首页 </a>
+
+   <a href="http://localhost:8080/html/web/tuanduijieshao/index.html" class="item">
+    团队介绍
+   </a>
+   <a href="http://localhost:8080/html/web/keyanxiangmu/zongxiangkeyan/index.html" class="item">
+    科研项目
+   </a>
+   <a href="http://localhost:8080/html/web/lunwenzhuzuo/papers/index.html" class="item">
+    论文著作
+   </a>
+   <a href="http://localhost:8080/html/web/tuanduidongtai/index.html" class="item">
+    团队动态
+   </a>
+   <a href="http://localhost:8080/html/web/tuanduichengyuan/index.html" class="item">
+    团队成员
+   </a>
+   <a href="http://localhost:8080/html/web/lianxiwomen1398269395334127618/index.html" class="item">
+    联系我们
+   </a>
+  </div>
+  <div class="nav-search" >
+   <!--搜索-start--> 
+   <form id="searchDataForm" style="border:1px solid #ff2416" action="http://localhost:8080/mcms/search.do" method="post" class="ms-search-input">
+    <div class="ms-search-input-div" >
+     <!--输入框 - start --> 
+     <input class="ms-input"  name="content_title" placeholder="输入搜索关键字">
+     <!--输入框 -end --> 
+    </div> 
+    <div class="ms-search-button" onclick="document.getElementById('searchDataForm').submit();"> 
+     <i class="iconfont icon-fangdajing" style="color: #ff2416"></i>
+    </div> 
+   </form> 
+   <!--搜索-end--> 
+  </div> 
+ </div> 
+</div>-->
+<!--   <div class="ms-banner">-->
+<!--    <swiper class="ms-vue-awesome-swiper" :options="{-->
+<!--slidesPerView : 1,-->
+<!--spaceBetween: 0,-->
+<!--autoplay: {-->
+<!--delay: 1500,-->
+<!--},-->
+<!--navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}-->
+<!--}"> -->
+<!--&lt;!&ndash;     <div class="swiper-button-prev " slot="button-prev"> &ndash;&gt;-->
+<!--&lt;!&ndash;     </div> &ndash;&gt;-->
+<!--&lt;!&ndash;     <div class="swiper-button-next " slot="button-next"> &ndash;&gt;-->
+<!--&lt;!&ndash;     </div> &ndash;&gt;-->
+<!--     &lt;!&ndash;静态图片&ndash;&gt; -->
+<!--     &lt;!&ndash;动态图片&ndash;&gt;-->
+<!--     -->
+<!--     <swiper-slide>-->
+<!--      <a href="https://www.mingsoft.net" target="_blank" style="width:100%;height: 100%">-->
+<!--       <div style="background-image: url('http://localhost:8080//upload/1/cms/content/1609838691084.png');background-size: cover; background-position: center; width:100%;height: 100%">-->
+<!--       </div>-->
+<!--      </a>-->
+<!--     </swiper-slide>-->
+<!--     -->
+<!--    </swiper> -->
+<!--   </div> -->
+<!--   <div class="about">-->
+<!--      -->
+<!--   </div> -->
+<!--   <div class="product"> -->
+<!--    <div class="title"> -->
+<!--     <span> 核心产品 </span> -->
+<!--    </div> -->
+<!--    <div class="body">-->
+<!--       -->
+<!--    </div> -->
+<!--    <a href="http://localhost:8080/html/web/product/index.html" class="more"> 更多产品 </a> -->
+<!--   </div> -->
+<!--   <div class="news"> -->
+<!--    <div class="title"> -->
+<!--     <span> 新闻动态 </span> -->
+<!--    </div> -->
+<!--    <div class="body">-->
+<!--       -->
+<!--     <div class="right">-->
+<!--        -->
+<!--     </div> -->
+<!--    </div> -->
+<!--    <div class="more"> -->
+<!--    </div> -->
+<!--    <a href="http://localhost:8080/html/web/news/index.html" class="more"> 更多新闻 </a>-->
+<!--   </div>-->
+
+      <a href="http://localhost:8080">
+      <div class="logo row" style="padding-left: 50px;height:auto;width: 100%;margin: 0 auto;">
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="554" height="137"><path d="M181.064.348c-20.608-.027-34.256 10.836-36.176 27.079a1600.065 1600.065 0 0 1-1.384 11.257H411.64s.504-3.957.896-7.133C414.552 15.188 407.6.35 382.312.35v.002S191.928.36 181.064.348zM17.424.353l-4.706 38.331h121.6l4.688-38.33H17.422h.002zm408.184 0l-4.696 38.331h131.824s.16-1.386.744-5.898C556.688 7.626 540.456.353 524.784.353h-99.176zm-6.512 52.926l-10.272 83.656 45.48-.016 10.28-83.624-45.488-.018v.002zm86.4 0l-10.288 83.656 45.48-.016 10.28-83.624-45.472-.018v.002zm-494.552.012L.654 136.939h121.592l4.48-36.288-76.138-.008 1.926-15.648h76.108l3.896-31.702H10.95l-.006-.002zm130.776 0c-3.336 21.832 7.592 31.701 23.08 31.701 8.424 0 61.52-.024 61.52-.024l-1.92 15.672-88.488.008-4.456 36.288s96.336.032 100.24 0c3.224-.232 25.76-.848 33.432-19.28 2.488-5.984 4.688-27.44 5.304-31.944 3.544-26.16-14.568-32.397-28.832-32.397-7.864 0-84.352-.024-99.88-.024zm141.552 0L273 136.939h45.456l6.4-51.944h57.096c16.192 0 24.896-8.706 26.512-20.397a430.97 430.97 0 0 0 1.4-11.305H283.272v-.002z" fill="#E52534"/></svg> -->
+
+              <img title="" width="150" alt="" src="http://localhost:8080/template/1/default/images/soe5.png" >
+
+<!--          <img src="img/soe4.png" width="150"/>-->
+      </div></a>
+
+<!--   九宫格目录-->
+   <main class="row" style="display: block">
+    <div class="underlay-text">
+<!--     <span>SOE@NEU</span>-->
+        <span style="font-size: 1em;text-align: center;">Science of</br> Education</span>
+    </div>
+
+    <div class="page-container row" style="padding-bottom:0;margin-bottom: 0;">
+     <!--  <h1 class="main-title">
+           SOE@NEU
+           <span class="icon-dropdown"></span>
+       </h1> -->
+
+     <div class="content grid grid-teams">
+      <h1 class="main-title">
+       大数据处理与机器学习实验室
+
+       <span class="icon-dropdown"></span>
+      </h1>
+         <!--          预定义-->
+         <!--          预定义-->
+
+<!--         循环遍历栏目-->
+      <div class="card card-team col-lg-4 col-sm-6 col-xs-6">
+          <a href="http://localhost:8080/html/web/tuanduijieshao/index.html">
+
+          <div class="card-team__bg" style="background-image: "></div>
+
+
+       <div class="card-team__logo">
+<!--        <i class="fas fa-football-ball"></i>-->
+       </div>
+       <div class="card-team__number">1</div>
+       <div class="card-team__name">团队介绍</div>
+          </a>
+      </div>
+
+      <div class="card card-team col-lg-4 col-sm-6 col-xs-6">
+          <a href="http://localhost:8080/html/web/keyanxiangmu/zongxiangkeyan/index.html">
+
+          <div class="card-team__bg" style="background-image: "></div>
+
+
+       <div class="card-team__logo">
+<!--        <i class="fas fa-football-ball"></i>-->
+       </div>
+       <div class="card-team__number">2</div>
+       <div class="card-team__name">科研项目</div>
+          </a>
+      </div>
+
+      <div class="card card-team col-lg-4 col-sm-6 col-xs-6">
+          <a href="http://localhost:8080/html/web/lunwenzhuzuo/papers/index.html">
+
+          <div class="card-team__bg" style="background-image: "></div>
+
+
+       <div class="card-team__logo">
+<!--        <i class="fas fa-football-ball"></i>-->
+       </div>
+       <div class="card-team__number">3</div>
+       <div class="card-team__name">论文著作</div>
+          </a>
+      </div>
+
+      <div class="card card-team col-lg-4 col-sm-6 col-xs-6">
+          <a href="http://localhost:8080/html/web/tuanduidongtai/index.html">
+
+          <div class="card-team__bg" style="background-image: "></div>
+
+
+       <div class="card-team__logo">
+<!--        <i class="fas fa-football-ball"></i>-->
+       </div>
+       <div class="card-team__number">4</div>
+       <div class="card-team__name">团队动态</div>
+          </a>
+      </div>
+
+      <div class="card card-team col-lg-4 col-sm-6 col-xs-6">
+          <a href="http://localhost:8080/html/web/tuanduichengyuan/index.html">
+
+          <div class="card-team__bg" style="background-image: "></div>
+
+
+       <div class="card-team__logo">
+<!--        <i class="fas fa-football-ball"></i>-->
+       </div>
+       <div class="card-team__number">5</div>
+       <div class="card-team__name">团队成员</div>
+          </a>
+      </div>
+
+      <div class="card card-team col-lg-4 col-sm-6 col-xs-6">
+          <a href="http://localhost:8080/html/web/lianxiwomen1398269395334127618/index.html">
+
+          <div class="card-team__bg" style="background-image: "></div>
+
+
+       <div class="card-team__logo">
+<!--        <i class="fas fa-football-ball"></i>-->
+       </div>
+       <div class="card-team__number">6</div>
+       <div class="card-team__name">联系我们</div>
+          </a>
+      </div>
+
+<!--      <div class="card card-team col-lg-4 col-sm-6 col-xs-6">-->
+<!--       <div class="card-team__bg" style="background-image: "></div>-->
+
+<!--       <div class="card-team__logo">-->
+<!--&lt;!&ndash;        <i class="fas fa-football-ball"></i>&ndash;&gt;-->
+<!--       </div>-->
+<!--       <div class="card-team__number">02</div>-->
+<!--       <div class="card-team__name">科研项目</div>-->
+<!--      </div>-->
+<!--      <div class="card card-team col-lg-4 col-sm-6 col-xs-6">-->
+<!--       <div class="card-team__bg" style="background-image: "></div>-->
+
+<!--       <div class="card-team__logo">-->
+<!--&lt;!&ndash;        <i class="fas fa-football-ball"></i>&ndash;&gt;-->
+<!--       </div>-->
+<!--       <div class="card-team__number">03</div>-->
+<!--       <div class="card-team__name">论文著作</div>-->
+<!--      </div>-->
+<!--      <div class="card card-team col-lg-4 col-sm-6 col-xs-6">-->
+<!--       <div class="card-team__bg" style="background-image: "></div>-->
+
+<!--       <div class="card-team__logo">-->
+<!--&lt;!&ndash;        <i class="fas fa-football-ball"></i>&ndash;&gt;-->
+<!--       </div>-->
+<!--       <div class="card-team__number">04</div>-->
+<!--       <div class="card-team__name">团队动态</div>-->
+<!--      </div>-->
+
+<!--      <div class="card card-team col-lg-4 col-sm-6 col-xs-6">-->
+<!--       <div class="card-team__bg" style="background-image:"></div>-->
+
+<!--       <div class="card-team__logo">-->
+<!--&lt;!&ndash;        <i class="fas fa-football-ball"></i>&ndash;&gt;-->
+<!--       </div>-->
+<!--       <div class="card-team__number">05</div>-->
+<!--       <div class="card-team__name">团队成员</div>-->
+<!--      </div>-->
+<!--      <div class="card card-team col-lg-4 col-sm-6 col-xs-6">-->
+<!--       <div class="card-team__bg" style="background-image:"></div>-->
+
+<!--       <div class="card-team__logo">-->
+<!--&lt;!&ndash;        <i class="fas fa-football-ball"></i>&ndash;&gt;-->
+<!--       </div>-->
+<!--       <div class="card-team__number">06</div>-->
+<!--       <div class="card-team__name">联系我们</div>-->
+<!--      </div>-->
+      <!-- <div class="card card-team">
+           <div class="card-team__bg" style="background-image: "></div>
+
+           <div class="card-team__logo">
+               <i class="fas fa-football-ball"></i>
+           </div>
+           <div class="card-team__number">07</div>
+           <div class="card-team__name">Chiefs</div>
+       </div>
+       <div class="card card-team">
+           <div class="card-team__bg" style="background-image: "></div>
+
+           <div class="card-team__logo">
+               <i class="fas fa-football-ball"></i>
+           </div>
+           <div class="card-team__number">08</div>
+           <div class="card-team__name">Raiders</div>
+       </div> -->
+     </div>
+    </div>
+
+
+
+
+   </main>
+<!--   九宫格目录-->
+<!--   介绍-->
+   <div class="row" style="width: 100%;color: whitesmoke;margin: 0 auto;background-color: #292d4a;">
+
+    <div class="col-lg-6 col-sm-12 col-xs-12" style="padding-top: 0.5em;padding-left: 2em;">
+        <h3  style=""><span style="border-bottom: 3px solid #ff2416;width: auto;">团队介绍</span></h3>
+     <p style="padding: 0.5em;">
+<!--      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;徐彬，博士，副教授。ACM China SIGCSE分会理事，中国计算机学会信息系统专委会委员，全国高等院校计算机基础教育研究会实验教学专业委员会委员，辽宁省大学计算机基础类教学指导委员会秘书长。东北大学国家级计算机实验教学示范中心副主任，沈阳市高层次人才计划高级人才。 研究方向为教育数据挖掘，人工智能与智慧教育，学习分析技术...-->
+         徐彬，博士，副教授。ACM China SIGCSE分会理事，中国计算机学会信息系统专委会委员，全国高等院校计算机基础教育研究会实验教学专业委员会委员，辽宁省大学计算机基础类教学指导委员会秘书长。东北大学国家级计算机实验教学示范中心副主任，沈阳市高层次人才计划高级人才。 研究方向为教育数据挖掘，人工智能与智慧教育，学习分析技术。 
+      <a href="http://www.cse.neu.edu.cn/2019/1206/c6641a162065/page.htm">More+</a>
+     </p>
+    </div>
+
+
+    <div class="col-lg-6 col-sm-12 col-xs-12"  style="padding-top: 0.5em;padding-left: 2em;">
+     <h3  style=""><span style="border-bottom: 3px solid #ff2416;width: auto;">联系我们</span></h3>
+     <p style="padding-left: 1em;padding-top: 0.5em;">
+      <i class="glyphicon glyphicon-map-marker"></i>
+
+      <span style="padding-left: 0.5em;">东北大学计算机科学与工程学院......</span>
+     </p>
+     <p style="padding-left: 1em;">
+      <i class="glyphicon glyphicon-earphone"></i>
+      <span style="padding-left: 0.5em;">123456789</span>
+     </p>
+     <p style="padding-left: 1em;">
+      <i class="glyphicon glyphicon-envelope"></i>
+
+      <span style="padding-left: 0.5em;">xubin@mail.neu.edu.cn</span>
+     </p>
+    </div>
+   </div>
+<!--   介绍-->
+
+<!--<div class="ms-footer"> -->
+<!-- <div class="body"> -->
+<!--  <div class="top"> -->
+<!--   <div class="top-left">-->
+<!--      -->
+<!--    <div class="foot-nav"> -->
+<!--     <a href="http://localhost:8080/html/web/tuanduijieshao/index.html" class="nav-item"> 团队介绍 </a>  -->
+<!--    </div>  -->
+<!--    <div class="foot-nav"> -->
+<!--     <a href="http://localhost:8080/html/web/keyanxiangmu/index.html" class="nav-item"> 科研项目 </a>  -->
+<!--     <div> -->
+<!--      <a href="http://localhost:8080/html/web/keyanxiangmu/zongxiangkeyan/index.html" class="item"> 纵向科研 </a> -->
+<!--     </div>  -->
+<!--     <div> -->
+<!--      <a href="http://localhost:8080/html/web/keyanxiangmu/hengxiangkeyan/index.html" class="item"> 横向科研 </a> -->
+<!--     </div>  -->
+<!--    </div>  -->
+<!--    <div class="foot-nav"> -->
+<!--     <a href="http://localhost:8080/html/web/lunwenzhuzuo/index.html" class="nav-item"> 论文著作 </a>  -->
+<!--     <div> -->
+<!--      <a href="http://localhost:8080/html/web/lunwenzhuzuo/papers/index.html" class="item"> 论文著作 </a> -->
+<!--     </div>  -->
+<!--     <div> -->
+<!--      <a href="http://localhost:8080/html/web/lunwenzhuzuo/ruanjianzhuozuoquan/index.html" class="item"> 软件著作权 </a> -->
+<!--     </div>  -->
+<!--     <div> -->
+<!--      <a href="http://localhost:8080/html/web/lunwenzhuzuo/famingzhuanli/index.html" class="item"> 发明专利 </a> -->
+<!--     </div>  -->
+<!--    </div>  -->
+<!--    <div class="foot-nav"> -->
+<!--     <a href="http://localhost:8080/html/web/tuanduidongtai/index.html" class="nav-item"> 团队动态 </a>  -->
+<!--    </div>  -->
+<!--    <div class="foot-nav"> -->
+<!--     <a href="http://localhost:8080/html/web/tuanduichengyuan/index.html" class="nav-item"> 团队成员 </a>  -->
+<!--    </div>  -->
+<!--    <div class="foot-nav"> -->
+<!--     <a href="http://localhost:8080/html/web/lianxiwomen1398269395334127618/index.html" class="nav-item"> 联系我们 </a>  -->
+<!--    </div>  -->
+<!--   </div> -->
+<!--   <div class="top-right"> -->
+<!--    <div class="qr"> -->
+<!--     <img title="" alt="" src="http://localhost:8080/template/1/default/images/sw.png" class="pic">-->
+<!--     <span class="text"> 商务微信 </span>-->
+<!--    </div> -->
+<!--    <div class="qr"> -->
+<!--     <img title="" alt="" src="http://localhost:8080/template/1/default/images/gzh.png" class="pic">-->
+<!--     <span class="text"> 公众号 </span> -->
+<!--    </div> -->
+<!--   </div> -->
+<!--  </div> -->
+<!--  <span class="copyright"> <el-link href="https://www.mingsoft.net/" type="primary">© 江西铭软科技有限公司</el-link> 2012-至今 All Rights Reserved. Powered by MCms </span>-->
+<!--  <span class="power"> @该网页由 <el-link href="https://designer.mingsoft.net/" type="primary">MDesigner</el-link> 制作完成 </span>-->
+<!-- </div> -->
+<!--</div>-->
+
+
+<div class="ms-footer" style="width: 100%;margin: 0 auto;background-color: #55557f;padding-bottom: 0;height: 20px;">
+ <div class="body">
+
+  <div class="row" style="width: 100%;margin: 0 auto;;padding-bottom: 0;">
+   <p style="text-align: center;color: whitesmoke;padding-bottom: 0;line-height: 10px;vertical-align: middle;margin-top: 5px;">Copyright © 2021-2022 课题组网站 </p>
+  </div>
+  <!--<div class="top">
+   <div class="top-left">
+    <div class="foot-nav">
+     <a href="http://localhost:8080/html/web/tuanduijieshao/index.html" class="nav-item"> 团队介绍 </a> 
+    </div>     <div class="foot-nav">
+     <a href="http://localhost:8080/html/web/keyanxiangmu/index.html" class="nav-item"> 科研项目 </a> 
+     <div>
+      <a href="http://localhost:8080/html/web/keyanxiangmu/zongxiangkeyan/index.html" class="item"> 纵向科研 </a>
+     </div> 
+     <div>
+      <a href="http://localhost:8080/html/web/keyanxiangmu/hengxiangkeyan/index.html" class="item"> 横向科研 </a>
+     </div> 
+    </div>     <div class="foot-nav">
+     <a href="http://localhost:8080/html/web/lunwenzhuzuo/index.html" class="nav-item"> 论文著作 </a> 
+     <div>
+      <a href="http://localhost:8080/html/web/lunwenzhuzuo/papers/index.html" class="item"> 论文著作 </a>
+     </div> 
+     <div>
+      <a href="http://localhost:8080/html/web/lunwenzhuzuo/ruanjianzhuozuoquan/index.html" class="item"> 软件著作权 </a>
+     </div> 
+     <div>
+      <a href="http://localhost:8080/html/web/lunwenzhuzuo/famingzhuanli/index.html" class="item"> 发明专利 </a>
+     </div> 
+    </div>     <div class="foot-nav">
+     <a href="http://localhost:8080/html/web/tuanduidongtai/index.html" class="nav-item"> 团队动态 </a> 
+    </div>     <div class="foot-nav">
+     <a href="http://localhost:8080/html/web/tuanduichengyuan/index.html" class="nav-item"> 团队成员 </a> 
+    </div>     <div class="foot-nav">
+     <a href="http://localhost:8080/html/web/lianxiwomen1398269395334127618/index.html" class="nav-item"> 联系我们 </a> 
+    </div> 
+   </div>
+   <div class="top-right">
+    <div class="qr">
+     <img title="" alt="" src="http://localhost:8080/template/1/default/images/sw.png" class="pic">
+     <span class="text"> 商务微信 </span>
+    </div>
+    <div class="qr">
+     <img title="" alt="" src="http://localhost:8080/template/1/default/images/gzh.png" class="pic">
+     <span class="text"> 公众号 </span>
+    </div>
+   </div>
+  </div>
+  <span class="copyright"> <el-link href="https://www.mingsoft.net/" type="primary">© 江西铭软科技有限公司</el-link> 2012-至今 All Rights Reserved. Powered by MCms </span>
+  <span class="power"> @该网页由 <el-link href="https://designer.mingsoft.net/" type="primary">MDesigner</el-link> 制作完成 </span>-->
+ </div>
+</div>  </div>   
+<!--  <script>-->
+<!--var app = new Vue({-->
+<!--    el: '#app',-->
+<!--    watch:{-->
+<!--    },-->
+<!--    data: {-->
+<!--    },-->
+<!--    methods: {-->
+<!--       switchShow:function(arr){-->
+<!--       var that = this-->
+<!--           arr.forEach(function(x){-->
+<!--              let e = that.$el.querySelector("#key_"+x)-->
+<!--               if(e){-->
+<!--                   e.style.display=e.style.display=='none'?'flex':'none'-->
+<!--               }-->
+<!--           })-->
+<!--       },-->
+<!--    },-->
+<!--    created(){-->
+<!--    }-->
+<!--})-->
+<!--</script> -->
+  <style>
+    body {
+        background-color:#fff;
+        box-sizing:border-box;
+        font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Segoe UI", "Helvetica Neue", "PingFang SC", "Noto Sans", "Noto Sans CJK SC", "Microsoft YaHei", 微软雅黑, sans-serif;
+        moz-box-sizing:border-box;
+        webkit-box-sizing:border-box;
+    }
+    .swiper-button-prev, .swiper-button-next{
+     color: #fff;
+    }
+    .ms-banner 
+    {
+            flex-wrap:nowrap;
+            flex-direction:row;
+            display:flex;
+            width:100%;
+            box-sizing:border-box;
+            margin-top:0px;
+            height:630px;
+    }
+    .ms-banner .ms-vue-awesome-swiper 
+    {
+            background-color:#E8F4FD;
+            align-items:center;
+            flex-wrap:nowrap;
+            flex-direction:row;
+            display:flex;
+            width:100%;
+            box-sizing:border-box;
+            position:relative;
+            padding-left:0px;
+            justify-content:space-between;
+            margin-top:0px;
+            height:100%;
+    }
+    .ms-banner .ms-vue-awesome-swiper .ms-vue-awesome-swiper-bottom 
+    {
+            background-color:rgba(0,0,0,0.5);
+            align-items:center;
+            flex-direction:row;
+            bottom:0px;
+            display:flex;
+            box-sizing:border-box;
+            justify-content:flex-start;
+            flex-wrap:nowrap;
+            width:100%;
+            position:absolute;
+            padding-left:10px;
+            margin-top:0px;
+            height:40px;
+    }
+    .ms-banner .ms-vue-awesome-swiper .ms-vue-awesome-swiper-bottom .ms-vue-awesome-swiper-title 
+    {
+            color:#FFFFFF;
+            flex-direction:row;
+            word-wrap:break-word;
+            display:inline-block;
+            font-size:14px;
+            padding-left:0px;
+    }
+    .about 
+    {
+            align-items:center;
+            flex-wrap:nowrap;
+            flex-direction:row;
+            display:flex;
+            padding-right:0px;
+            width:100%;
+            box-sizing:border-box;
+            padding-left:0px;
+            justify-content:center;
+            margin-top:18px;
+            height:200px;
+    }
+    .about .body 
+    {
+            padding-bottom:0px;
+            flex-wrap:nowrap;
+            flex-direction:row;
+            display:flex;
+            padding-right:0px;
+            width:1200px;
+            box-sizing:border-box;
+            padding-top:0px;
+            padding-left:0px;
+            margin-top:0px;
+            height:100%;
+    }
+    .about .body .left 
+    {
+            flex-wrap:nowrap;
+            flex-direction:row;
+            display:flex;
+            padding-right:0px;
+            width:40%;
+            box-sizing:border-box;
+            padding-left:0px;
+            height:100%;
+    }
+    .about .body .left img 
+    {
+            width:100%;
+            padding-top:0px;
+            padding-left:0px;
+            height:100%;
+    }
+    .about .body .right 
+    {
+            flex-wrap:nowrap;
+            flex-direction:column;
+            display:flex;
+            padding-right:20px;
+            width:100%;
+            box-sizing:border-box;
+            padding-left:20px;
+            margin-top:0px;
+            height:100%;
+    }
+    .about .body .right .title 
+    {
+            align-items:center;
+            flex-wrap:nowrap;
+            flex-direction:row;
+            display:flex;
+            padding-right:0px;
+            width:100%;
+            box-sizing:border-box;
+            padding-left:0px;
+            margin-top:0px;
+            height:40px;
+    }
+    .about .body .right .title span 
+    {
+            padding-bottom:0px;
+            flex-direction:row;
+            word-wrap:break-word;
+            display:inline-block;
+            padding-right:0px;
+            font-size:28PX;
+            padding-top:0px;
+            padding-left:0px;
+    }
+    .about .body .right .desc 
+    {
+            flex-wrap:nowrap;
+            flex-direction:row;
+            display:flex;
+            padding-right:0px;
+            width:100%;
+            box-sizing:border-box;
+            padding-left:0px;
+            height:100%;
+    }
+    .about .body .right .desc span 
+    {
+            padding-bottom:0px;
+            flex-direction:row;
+            word-wrap:break-word;
+            display:inline-block;
+            font-size:16PX;
+            padding-top:0px;
+            margin-top:20px;
+     line-height: 32px;
+
+    }
+    .product 
+    {
+            background-color:#F2F2F2;
+            align-items:center;
+            flex-direction:column;
+            display:flex;
+            padding-right:0px;
+            box-sizing:border-box;
+            justify-content:center;
+            padding-bottom:40px;
+            flex-wrap:nowrap;
+            width:100%;
+            margin-bottom:0px;
+            padding-top:40px;
+            padding-left:0px;
+            margin-top:20px;
+    }
+    .product .title 
+    {
+            align-items:center;
+            flex-direction:row;
+            display:flex;
+            padding-right:0px;
+            box-sizing:border-box;
+            justify-content:center;
+            padding-bottom:0px;
+            flex-wrap:nowrap;
+            width:100%;
+            margin-bottom:0px;
+            padding-top:0px;
+            padding-left:0px;
+            margin-top:0px;
+            height:40px;
+    }
+    .product .title span 
+    {
+            padding-bottom:0px;
+            flex-direction:row;
+            word-wrap:break-word;
+            display:inline-block;
+            padding-right:0px;
+            font-size:28PX;
+            padding-top:0px;
+            padding-left:0px;
+    }
+    .product .body 
+    {
+            flex-direction:row;
+            display:flex;
+            padding-right:0px;
+            box-sizing:border-box;
+            justify-content:space-between;
+            padding-bottom:0px;
+            flex-wrap:wrap;
+            width:1200px;
+            margin-bottom:40px;
+            padding-top:0px;
+            padding-left:0px;
+            margin-top:40px;
+            height:100%;
+    }
+    .product .body .prod 
+    {
+            background-color:#FFFFFF;
+            flex-direction:column;
+            display:flex;
+            padding-right:20px;
+            box-sizing:border-box;
+            padding-bottom:20px;
+            flex-wrap:nowrap;
+            width:32%;
+            margin-bottom:20px;
+            padding-top:20px;
+            padding-left:20px;
+            margin-top:0px;
+            height:100%;
+    }
+    .product .body .prod .pic 
+    {
+            padding-bottom:0px;
+            flex-wrap:nowrap;
+            flex-direction:row;
+            display:flex;
+            padding-right:0px;
+            width:100%;
+            box-sizing:border-box;
+            padding-top:0px;
+            padding-left:0px;
+            margin-top:0px;
+            height:200px;
+    }
+    .product .body .prod .pic img 
+    {
+            padding-bottom:0px;
+            width:100%;
+            margin-bottom:0px;
+            padding-top:0px;
+            margin-top:0px;
+            height:100%;
+    }
+    .product .body .prod .text 
+    {
+            padding-bottom:0px;
+            text-align:center;
+            flex-direction:row;
+            word-wrap:break-word;
+            display:inline-block;
+            padding-right:0px;
+            font-size:16PX;
+            padding-top:8px;
+            padding-left:0px;
+            margin-top:10px;
+            height:40px;
+    }
+    .product .more 
+    {
+            background-color:#FFFFFF;
+            align-items:center;
+            flex-direction:row;
+            display:flex;
+            padding-right:0px;
+            box-sizing:border-box;
+            justify-content:center;
+            padding-bottom:0px;
+            flex-wrap:nowrap;
+            width:100px;
+            margin-bottom:0px;
+            padding-top:0px;
+            padding-left:0px;
+            margin-top:0px;
+            height:48px;
+    }
+    .news 
+    {
+            align-items:center;
+            flex-direction:column;
+            display:flex;
+            padding-right:0px;
+            box-sizing:border-box;
+            justify-content:center;
+            padding-bottom:20px;
+            flex-wrap:nowrap;
+            width:100%;
+            margin-bottom:20px;
+            padding-top:20px;
+            padding-left:0px;
+            margin-top:20px;
+    }
+    .news .title 
+    {
+            align-items:center;
+            flex-direction:row;
+            display:flex;
+            padding-right:0px;
+            box-sizing:border-box;
+            justify-content:center;
+            padding-bottom:0px;
+            flex-wrap:nowrap;
+            width:100%;
+            margin-bottom:0px;
+            padding-top:0px;
+            padding-left:0px;
+            margin-top:0px;
+            height:40px;
+    }
+    .news .title span 
+    {
+            padding-bottom:0px;
+            flex-direction:row;
+            word-wrap:break-word;
+            display:inline-block;
+            padding-right:0px;
+            font-size:28PX;
+            padding-top:0px;
+            padding-left:0px;
+    }
+    .news .body 
+    {
+            align-items:flex-start;
+            flex-direction:row;
+            display:flex;
+            padding-right:0px;
+            box-sizing:border-box;
+            justify-content:space-between;
+            padding-bottom:0px;
+            flex-wrap:nowrap;
+            width:1200px;
+            margin-bottom:20px;
+            padding-top:0px;
+            padding-left:0px;
+            margin-top:20px;
+            height:100%;
+    }
+    .news .body .left 
+    {
+            padding-bottom:0px;
+            flex-wrap:nowrap;
+            flex-direction:column;
+            display:flex;
+            width:400px;
+            box-sizing:border-box;
+            margin-bottom:0px;
+            padding-top:0px;
+            padding-left:0px;
+            margin-top:0px;
+    }
+    .news .body .left img 
+    {
+            width:100%;
+            padding-top:0px;
+            height:280px;
+    }
+    .news .body .left .title 
+    {
+            text-align:left;
+            flex-direction:row;
+            word-wrap:break-word;
+            display:inline-block;
+            padding-right:0px;
+            justify-content:flex-start;
+            padding-bottom:0px;
+            font-size:18PX;
+            margin-bottom:0px;
+            padding-top:10px;
+            padding-left:0px;
+            margin-top:0px;
+            height:40px;
+    }
+    .news .body .left .desc 
+    {
+            padding-bottom:0px;
+            color:#B5B5B5;
+            text-align:left;
+            flex-direction:row;
+            word-wrap:break-word;
+            display:inline-block;
+            padding-right:0px;
+            font-size:14PX;
+            padding-top:0px;
+            padding-left:0px;
+            margin-top:0px;
+    }
+    .news .body .right 
+    {
+            padding-bottom:0px;
+            flex-wrap:nowrap;
+            flex-direction:column;
+            display:flex;
+            padding-right:0px;
+            width:800px;
+            margin-bottom:0px;
+            box-sizing:border-box;
+            padding-top:0px;
+            padding-left:20px;
+            margin-top:0px;
+            height:100%;
+    }
+    .news .body .right .news-item 
+    {
+            padding-bottom:0px;
+            flex-wrap:nowrap;
+            flex-direction:row;
+            display:flex;
+            padding-right:0px;
+            width:100%;
+            margin-bottom:10px;
+            box-sizing:border-box;
+            padding-top:0px;
+            padding-left:0px;
+            margin-top:0px;
+            height:100px;
+    }
+    .news .body .right .news-item .date 
+    {
+            background-color:#EEEEEE;
+            align-items:center;
+            flex-direction:column;
+            display:flex;
+            padding-right:8px;
+            box-sizing:border-box;
+            justify-content:center;
+            padding-bottom:8px;
+            flex-wrap:nowrap;
+            width:100px;
+            margin-bottom:0px;
+            padding-top:8px;
+            padding-left:8px;
+            height:100%;
+    }
+    .news .body .right .news-item .date .day 
+    {
+            padding-bottom:0px;
+            text-align:center;
+            flex-direction:row;
+            word-wrap:break-word;
+            display:inline-block;
+            padding-right:0px;
+            font-size:28PX;
+            padding-top:14px;
+            padding-left:0px;
+            height:70%;
+    }
+    .news .body .right .news-item .date .date 
+    {
+            text-align:center;
+            flex-direction:row;
+            word-wrap:break-word;
+            display:inline-block;
+            font-size:16PX;
+            padding-top:0px;
+    }
+    .news .body .right .news-item .news-body 
+    {
+            padding-bottom:0px;
+            flex-wrap:nowrap;
+            flex-direction:column;
+            display:flex;
+            padding-right:0px;
+            width:90%;
+            margin-bottom:10px;
+            box-sizing:border-box;
+            padding-top:0px;
+            padding-left:10px;
+            margin-top:0px;
+            height:100%;
+    }
+    .news .body .right .news-item .news-body .title 
+    {
+            text-align:left;
+            flex-direction:row;
+            word-wrap:break-word;
+            display:inline-block;
+            padding-right:0px;
+            justify-content:flex-start;
+            padding-bottom:0px;
+            font-size:18PX;
+            margin-bottom:0px;
+            padding-top:10px;
+            padding-left:0px;
+            margin-top:0px;
+            height:40px;
+    }
+    .news .body .right .news-item .news-body .desc 
+    {
+            padding-bottom:0px;
+            color:#B5B5B5;
+            text-align:left;
+            flex-direction:row;
+            word-wrap:break-word;
+            display:inline-block;
+            padding-right:0px;
+            font-size:14PX;
+            padding-top:0px;
+            padding-left:0px;
+            margin-top:0px;
+    }
+    .news .more 
+    {
+            background-color:#FFFFFF;
+            align-items:center;
+            flex-direction:row;
+            display:flex;
+            padding-right:0px;
+            box-sizing:border-box;
+            justify-content:center;
+            padding-bottom:0px;
+            flex-wrap:nowrap;
+            width:100px;
+            margin-bottom:0px;
+            padding-top:0px;
+            padding-left:0px;
+            margin-top:0px;
+            height:48px;
+    }
+@media (max-width: 768px){
+        .ms-banner 
+        {
+                flex-wrap:nowrap;
+                flex-direction:row;
+                display:flex;
+                width:100%;
+                box-sizing:border-box;
+                margin-top:0px;
+                height:unset;
+        }
+        .ms-banner .ms-vue-awesome-swiper 
+        {
+                background-color:#E8F4FD;
+                align-items:center;
+                flex-wrap:nowrap;
+                flex-direction:row;
+                display:flex;
+                width:100%;
+                box-sizing:border-box;
+                position:relative;
+                padding-left:0px;
+                justify-content:space-between;
+                margin-top:0px;
+                height:300px;
+        }
+        .ms-banner .ms-vue-awesome-swiper .ms-vue-awesome-swiper-bottom 
+        {
+                background-color:RGBA(63, 158, 255, .75);
+                align-items:center;
+                flex-direction:row;
+                bottom:0px;
+                display:flex;
+                box-sizing:border-box;
+                justify-content:flex-start;
+                flex-wrap:nowrap;
+                width:100%;
+                position:absolute;
+                padding-left:10px;
+                margin-top:0px;
+                height:40px;
+        }
+        .ms-banner .ms-vue-awesome-swiper .ms-vue-awesome-swiper-bottom .ms-vue-awesome-swiper-title 
+        {
+                color:#FFFFFF;
+                flex-direction:row;
+                word-wrap:break-word;
+                display:inline-block;
+                font-size:14px;
+                padding-left:0px;
+        }
+        .about 
+        {
+                align-items:center;
+                flex-wrap:nowrap;
+                flex-direction:column;
+                display:flex;
+                padding-right:0px;
+                width:100%;
+                box-sizing:border-box;
+                padding-left:0px;
+                justify-content:center;
+                margin-top:18px;
+                height:100%;
+        }
+        .about .body 
+        {
+                padding-bottom:0px;
+                align-items:center;
+                flex-wrap:nowrap;
+                flex-direction:column;
+                display:flex;
+                width:100%;
+                box-sizing:border-box;
+                margin-bottom:0px;
+                padding-top:0px;
+                margin-top:0px;
+                justify-content:flex-start;
+                height:100%;
+        }
+        .about .body .left 
+        {
+                align-items:center;
+                flex-wrap:nowrap;
+                flex-direction:column;
+                display:flex;
+                padding-right:0px;
+                width:90%;
+                box-sizing:border-box;
+                margin-bottom:10px;
+                padding-left:0px;
+                justify-content:center;
+        }
+        .about .body .left img 
+        {
+                width:100%;
+                margin-bottom:0px;
+                padding-top:0px;
+                height:200px;
+        }
+        .about .body .right 
+        {
+                flex-wrap:nowrap;
+                flex-direction:column;
+                display:flex;
+                padding-right:20px;
+                width:100%;
+                box-sizing:border-box;
+                margin-bottom:0px;
+                padding-left:20px;
+                margin-top:0px;
+                height:100%;
+        }
+        .about .body .right .title 
+        {
+                align-items:center;
+                flex-wrap:nowrap;
+                flex-direction:row;
+                display:flex;
+                padding-right:0px;
+                width:100%;
+                box-sizing:border-box;
+                padding-left:0px;
+                margin-top:0px;
+                height:40px;
+        }
+        .about .body .right .title span 
+        {
+                padding-bottom:0px;
+                flex-direction:row;
+                word-wrap:break-word;
+                display:inline-block;
+                padding-right:0px;
+                font-size:28PX;
+                padding-top:0px;
+                padding-left:0px;
+        }
+        .about .body .right .desc 
+        {
+                flex-wrap:nowrap;
+                flex-direction:row;
+                display:flex;
+                padding-right:0px;
+                width:100%;
+                box-sizing:border-box;
+                padding-left:0px;
+                height:100%;
+        }
+        .about .body .right .desc span 
+        {
+                padding-bottom:0px;
+                flex-direction:row;
+                word-wrap:break-word;
+                display:inline-block;
+                font-size:16PX;
+                padding-top:0px;
+                margin-top:20px;
+        }
+        .product 
+        {
+                background-color:#F2F2F2;
+                align-items:center;
+                flex-direction:column;
+                display:flex;
+                padding-right:0px;
+                box-sizing:border-box;
+                justify-content:center;
+                padding-bottom:40px;
+                flex-wrap:nowrap;
+                width:100%;
+                margin-bottom:0px;
+                padding-top:40px;
+                padding-left:0px;
+                margin-top:20px;
+                height:unset;
+        }
+        .product .title 
+        {
+                align-items:center;
+                flex-direction:row;
+                display:flex;
+                padding-right:0px;
+                box-sizing:border-box;
+                justify-content:center;
+                padding-bottom:0px;
+                flex-wrap:nowrap;
+                width:100%;
+                margin-bottom:0px;
+                padding-top:0px;
+                padding-left:0px;
+                margin-top:0px;
+                height:40px;
+        }
+        .product .title span 
+        {
+                padding-bottom:0px;
+                flex-direction:row;
+                word-wrap:break-word;
+                display:inline-block;
+                padding-right:0px;
+                font-size:28PX;
+                padding-top:0px;
+                padding-left:0px;
+        }
+        .product .body 
+        {
+                padding-bottom:0px;
+                align-items:center;
+                flex-wrap:nowrap;
+                flex-direction:column;
+                display:flex;
+                width:100%;
+                box-sizing:border-box;
+                margin-bottom:0px;
+                padding-top:0px;
+                margin-top:0px;
+                justify-content:center;
+                height:100%;
+        }
+        .product .body .prod 
+        {
+                background-color:#FFFFFF;
+                flex-direction:column;
+                display:flex;
+                padding-right:0px;
+                box-sizing:border-box;
+                padding-bottom:0px;
+                flex-wrap:nowrap;
+                width:90%;
+                margin-bottom:40px;
+                padding-top:0px;
+                padding-left:0px;
+                margin-top:0px;
+                height:100%;
+        }
+        .product .body .prod .pic 
+        {
+                padding-bottom:0px;
+                flex-wrap:nowrap;
+                flex-direction:row;
+                display:flex;
+                padding-right:0px;
+                width:100%;
+                box-sizing:border-box;
+                padding-top:0px;
+                padding-left:0px;
+                height:200px;
+        }
+        .product .body .prod .pic img 
+        {
+                padding-bottom:0px;
+                width:100%;
+                padding-top:0px;
+                margin-top:0px;
+                height:100%;
+        }
+        .product .body .prod .text 
+        {
+                padding-bottom:0px;
+                text-align:center;
+                flex-direction:row;
+                word-wrap:break-word;
+                display:inline-block;
+                padding-right:0px;
+                font-size:16PX;
+                padding-top:8px;
+                padding-left:0px;
+                margin-top:10px;
+                height:40px;
+        }
+        .product .more 
+        {
+                background-color:#FFFFFF;
+                align-items:center;
+                flex-direction:row;
+                display:flex;
+                padding-right:0px;
+                box-sizing:border-box;
+                justify-content:center;
+                padding-bottom:0px;
+                flex-wrap:nowrap;
+                width:100px;
+                margin-bottom:0px;
+                padding-top:0px;
+                padding-left:0px;
+                margin-top:0px;
+                height:48px;
+        }
+        .news 
+        {
+                align-items:center;
+                flex-direction:column;
+                display:flex;
+                padding-right:0px;
+                box-sizing:border-box;
+                justify-content:center;
+                padding-bottom:20px;
+                flex-wrap:nowrap;
+                width:100%;
+                margin-bottom:20px;
+                padding-top:20px;
+                padding-left:0px;
+                margin-top:20px;
+                height:unset;
+        }
+        .news .title 
+        {
+                align-items:center;
+                flex-direction:row;
+                display:flex;
+                padding-right:0px;
+                box-sizing:border-box;
+                justify-content:center;
+                padding-bottom:0px;
+                flex-wrap:nowrap;
+                width:100%;
+                margin-bottom:0px;
+                padding-top:0px;
+                padding-left:0px;
+                margin-top:0px;
+                height:40px;
+        }
+        .news .title span 
+        {
+                padding-bottom:0px;
+                flex-direction:row;
+                word-wrap:break-word;
+                display:inline-block;
+                padding-right:0px;
+                font-size:28PX;
+                padding-top:0px;
+                padding-left:0px;
+        }
+        .news .body 
+        {
+                align-items:flex-start;
+                flex-direction:column;
+                display:flex;
+                padding-right:0px;
+                box-sizing:border-box;
+                justify-content:space-between;
+                padding-bottom:0px;
+                flex-wrap:nowrap;
+                width:90%;
+                margin-bottom:20px;
+                padding-top:0px;
+                padding-left:0px;
+                margin-top:20px;
+                height:100%;
+        }
+        .news .body .left 
+        {
+                padding-bottom:0px;
+                flex-wrap:nowrap;
+                flex-direction:column;
+                display:flex;
+                width:100%;
+                box-sizing:border-box;
+                margin-bottom:10px;
+                padding-top:0px;
+                padding-left:0px;
+                margin-top:0px;
+        }
+        .news .body .left img 
+        {
+                padding-bottom:0px;
+                width:100%;
+                margin-bottom:0px;
+                padding-top:0px;
+                margin-top:0px;
+                height:100%;
+        }
+        .news .body .left .title 
+        {
+                padding-bottom:0px;
+                text-align:left;
+                flex-direction:row;
+                word-wrap:break-word;
+                display:inline-block;
+                padding-right:0px;
+                font-size:18PX;
+                padding-top:10px;
+                padding-left:0px;
+                margin-top:0px;
+                justify-content:flex-start;
+                height:40px;
+        }
+        .news .body .left .desc 
+        {
+                padding-bottom:0px;
+                color:#B5B5B5;
+                text-align:left;
+                flex-direction:row;
+                word-wrap:break-word;
+                display:inline-block;
+                padding-right:0px;
+                font-size:14PX;
+                padding-top:0px;
+                padding-left:0px;
+                margin-top:0px;
+        }
+        .news .body .right 
+        {
+                padding-bottom:0px;
+                flex-wrap:nowrap;
+                flex-direction:column;
+                display:flex;
+                padding-right:0px;
+                width:100%;
+                margin-bottom:0px;
+                box-sizing:border-box;
+                padding-top:0px;
+                padding-left:0px;
+                margin-top:0px;
+                height:100%;
+        }
+        .news .body .right .news-item 
+        {
+                padding-bottom:0px;
+                flex-wrap:nowrap;
+                flex-direction:row;
+                display:flex;
+                padding-right:0px;
+                width:100%;
+                margin-bottom:10px;
+                box-sizing:border-box;
+                padding-top:0px;
+                padding-left:0px;
+                margin-top:0px;
+                height:100px;
+        }
+        .news .body .right .news-item .date 
+        {
+                background-color:#EEEEEE;
+                align-items:center;
+                flex-direction:column;
+                display:flex;
+                padding-right:8px;
+                box-sizing:border-box;
+                justify-content:center;
+                padding-bottom:8px;
+                flex-wrap:nowrap;
+                width:100px;
+                margin-bottom:0px;
+                padding-top:8px;
+                padding-left:8px;
+                height:100%;
+        }
+        .news .body .right .news-item .date .day 
+        {
+                padding-bottom:0px;
+                text-align:center;
+                flex-direction:row;
+                word-wrap:break-word;
+                display:inline-block;
+                padding-right:0px;
+                font-size:28PX;
+                padding-top:14px;
+                padding-left:0px;
+                height:70%;
+        }
+        .news .body .right .news-item .date .date 
+        {
+                text-align:center;
+                flex-direction:row;
+                word-wrap:break-word;
+                display:inline-block;
+                font-size:16PX;
+                padding-top:0px;
+        }
+        .news .body .right .news-item .news-body 
+        {
+                padding-bottom:0px;
+                flex-wrap:nowrap;
+                flex-direction:column;
+                display:flex;
+                padding-right:0px;
+                width:90%;
+                margin-bottom:10px;
+                box-sizing:border-box;
+                padding-top:0px;
+                padding-left:10px;
+                margin-top:0px;
+                height:100%;
+        }
+        .news .body .right .news-item .news-body .title 
+        {
+                text-align:left;
+                flex-direction:row;
+                word-wrap:break-word;
+                display:inline-block;
+                padding-right:0px;
+                justify-content:flex-start;
+                padding-bottom:0px;
+                font-size:18PX;
+                margin-bottom:0px;
+                padding-top:10px;
+                padding-left:0px;
+                margin-top:0px;
+                height:40px;
+        }
+        .news .body .right .news-item .news-body .desc 
+        {
+         display: none;
+                padding-bottom:0px;
+                color:#B5B5B5;
+                text-align:left;
+                flex-direction:row;
+                word-wrap:break-word;
+                padding-right:0px;
+                font-size:14PX;
+                padding-top:0px;
+                padding-left:0px;
+                margin-top:0px;
+        }
+        .news .more 
+        {
+                background-color:#FFFFFF;
+                align-items:center;
+                flex-direction:row;
+                display:flex;
+                padding-right:0px;
+                box-sizing:border-box;
+                justify-content:center;
+                padding-bottom:0px;
+                flex-wrap:nowrap;
+                width:100px;
+                margin-bottom:0px;
+                padding-top:0px;
+                padding-left:0px;
+                margin-top:0px;
+                height:48px;
+        }
+
+}</style>
+ </body>
+</html>
