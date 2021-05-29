@@ -1,0 +1,814 @@
+<html>
+ <head> 
+  <meta charset="utf-8"> 
+  <title>铭飞MCms</title> 
+  <meta http-equiv="content-type" content="text/html"> 
+  <meta HTTP-EQUIV="Pragma" CONTENT="no-cache"> 
+  <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,width=device-width"> 
+  <meta name="format-detection" content="telephone=no"> 
+  <meta name="app-mobile-web-app-capable" content="yes"> 
+  <meta name="app-mobile-web-app-status-bar-style" content="black-translucent"> 
+  <meta name="keywords" content="铭飞MCMS"> 
+  <meta name="description" content="铭飞MCMS"> 
+  <script type="text/javascript" src="http://localhost:8080/static/plugins/vue/2.6.9/vue.min.js"></script> 
+  <link rel="stylesheet" href="http://localhost:8080/static/plugins/minireset/0.0.2/minireset.min.css"> 
+  <link rel="stylesheet" href="https://cdn.mingsoft.net/iconfont/iconfont.css"> 
+  <link rel="stylesheet" href="http://localhost:8080/static/plugins/animate/4.1.0/animate.min.css"> 
+  <script src="http://localhost:8080/static/plugins/element-ui/2.12.0/index.js"></script> 
+  <link rel="stylesheet" href="http://localhost:8080/static/plugins/element-ui/2.12.0/index.css"> 
+  <link rel="stylesheet" href="http://localhost:8080/template/1/default/css/app.css"> 
+  <!--网络请求框架--> 
+  <script src="http://localhost:8080/static/plugins/axios/0.18.0/axios.min.js"></script> 
+  <script src="http://localhost:8080/static/plugins/qs/6.6.0/qs.min.js"></script> 
+  <script src="http://localhost:8080/static/plugins/ms/1.0.0/ms.js"></script> 
+  <script src="http://localhost:8080/static/plugins/ms/1.0.0/ms.http.js"></script> 
+  <script src="http://localhost:8080/static/plugins/ms/1.0.0/ms.util.js"></script> 
+  <script>
+        ms.base = "";
+    </script> 
+  <style>
+        [v-cloak]{
+            display: none;
+        }
+    </style> 
+ </head> 
+ <body> 
+  <div id="app" v-cloak> 
+<div class="ms-nav">
+ <div class="body"> 
+  <div class="logo">
+   <a href="http://localhost:8080">
+   <img title="" alt="" src="http://localhost:8080//upload/1/appLogo/1609397756549.png" class="logo-pic">
+   <img title="" alt="" src="https://www.mingsoft.net//template/1/ms/images/1596437934982.png" class="logo-desc">
+   </a>
+  </div>
+  <div @click="switchShow([&quot;1605172743000_96378&quot;]);" class="nav-h5">
+   <i class="iconfont icon-caidan nav-h5-icon"></i> 
+   <div id="key_1605172743000_96378" class="nav-h5-body" style="display: none">
+    <a href="http://localhost:8080" class="nav-h5-item"> 首页 </a>
+    <a href=" class="nav-h5-item ">
+     团队介绍
+    </a>
+    <a href=" class="nav-h5-item ">
+     科研项目
+    </a>
+    <a href=" class="nav-h5-item ">
+     论文著作
+    </a>
+    <a href=" class="nav-h5-item  sel">
+     团队动态
+    </a>
+    <a href=" class="nav-h5-item ">
+     团队成员
+    </a>
+    <a href=" class="nav-h5-item ">
+     联系我们
+    </a>
+   </div> 
+  </div> 
+  <div class="nav-item">
+   <a href="http://localhost:8080" class="item"> 首页 </a>
+
+   <a href="http://localhost:8080/html/web/tuanduijieshao/index.html" class="item">
+    团队介绍
+   </a>
+   <a href="http://localhost:8080/html/web/keyanxiangmu/zongxiangkeyan/index.html" class="item">
+    科研项目
+   </a>
+   <a href="http://localhost:8080/html/web/lunwenzhuzuo/papers/index.html" class="item">
+    论文著作
+   </a>
+   <a href="http://localhost:8080/html/web/tuanduidongtai/index.html" class="item sel">
+    团队动态
+   </a>
+   <a href="http://localhost:8080/html/web/tuanduichengyuan/index.html" class="item">
+    团队成员
+   </a>
+   <a href="http://localhost:8080/html/web/lianxiwomen1398269395334127618/index.html" class="item">
+    联系我们
+   </a>
+  </div>
+  <div class="nav-search" >
+   <!--搜索-start--> 
+   <form id="searchDataForm" style="border:1px solid #ff2416" action="http://localhost:8080/mcms/search.do" method="post" class="ms-search-input">
+    <div class="ms-search-input-div" >
+     <!--输入框 - start --> 
+     <input class="ms-input"  name="content_title" placeholder="输入搜索关键字">
+     <!--输入框 -end --> 
+    </div> 
+    <div class="ms-search-button" onclick="document.getElementById('searchDataForm').submit();"> 
+     <i class="iconfont icon-fangdajing" style="color: #ff2416"></i>
+    </div> 
+   </form> 
+   <!--搜索-end--> 
+  </div> 
+ </div> 
+</div>   <div class="content"> 
+    <!--新闻详情-start--> 
+    <div class="body">
+     <div class="left">
+      <span class="title"> 团队动态 </span>
+    </div>
+     <div class="right"> 
+      <div class="ms-channel-path"> 
+       <span class="ms-channel-path-label"> 当前位置： </span> 
+       <a href="/" class="ms-channel-path-index"> 首页 </a>  
+       <i class="iconfont icon-youjiantou"></i> 
+       <a href="http://localhost:8080/html/web/tuanduidongtai/index.html" class="ms-channel-path-link"> 团队动态 </a>  
+      </div> 
+      <span class="big-title"> 第一条动态 </span> 
+      <div class="news-date-hit"> 
+       <span> 发布时间: </span> 
+       <span class="date"> 2021-05-28 </span> 
+       <span> 预览次数: </span> 
+       <span> <script type="text/javascript" src="http://localhost:8080/cms/content/1398260688937291778/hit.do"></script> </span> 
+      </div> 
+      <div class="news-body"> 
+       <span> <p style="box-sizing: border-box; outline: 0px; margin-top: 0px; margin-bottom: 16px; padding: 0px; font-size: 14px; white-space: normal; color: rgb(77, 77, 77); overflow: auto hidden; overflow-wrap: break-word; font-family: -apple-system, &quot;SF UI Text&quot;, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif, SimHei, SimSun; background-color: rgb(255, 255, 255); line-height: 26px !important;">下面我们开始分享一下开源中国中最火的Java开源CMS建站系统（代码可以到gitee.com中下载 搜一下项目名称）</p><p style="box-sizing: border-box; outline: 0px; margin-top: 0px; margin-bottom: 16px; padding: 0px; font-size: 14px; white-space: normal; color: rgb(77, 77, 77); overflow: auto hidden; overflow-wrap: break-word; font-family: -apple-system, &quot;SF UI Text&quot;, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif, SimHei, SimSun; background-color: rgb(255, 255, 255); line-height: 26px !important;"><span style="box-sizing: border-box; outline: 0px; flex-direction: row; overflow-wrap: break-word; display: inline-block; font-weight: 700;"><span style="box-sizing: border-box; outline: 0px; flex-direction: row; overflow-wrap: break-word; display: inline-block; margin: 0px; padding: 0px; color: rgb(243, 59, 69);">　　（1）铭飞 / MCMS（开发人/项目名称）</span></span></p><p style="box-sizing: border-box; outline: 0px; margin-top: 0px; margin-bottom: 16px; padding: 0px; font-size: 14px; white-space: normal; color: rgb(77, 77, 77); overflow: auto hidden; overflow-wrap: break-word; font-family: -apple-system, &quot;SF UI Text&quot;, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif, SimHei, SimSun; background-color: rgb(255, 255, 255); line-height: 26px !important;">　　watch 1800 star 3400 fork 1800</p><p style="box-sizing: border-box; outline: 0px; margin-top: 0px; margin-bottom: 16px; padding: 0px; font-size: 14px; white-space: normal; color: rgb(77, 77, 77); overflow: auto hidden; overflow-wrap: break-word; font-family: -apple-system, &quot;SF UI Text&quot;, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif, SimHei, SimSun; background-color: rgb(255, 255, 255); line-height: 26px !important;">　　项目介绍：</p><p style="box-sizing: border-box; outline: 0px; margin-top: 0px; margin-bottom: 16px; padding: 0px; font-size: 14px; white-space: normal; color: rgb(77, 77, 77); overflow: auto hidden; overflow-wrap: break-word; font-family: -apple-system, &quot;SF UI Text&quot;, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif, SimHei, SimSun; background-color: rgb(255, 255, 255); line-height: 26px !important;">　　完整开源！Java快速开发平台！基于Spring、SpringMVC、Mybatis架构，MStore提供更多好用的插件与模板（文章、商城、微信、论坛、会员、评论、支付、积分、工作流、任务调度等，同时提供上百套免费模板任意选择），价值源自分享！铭飞系统不仅一套简单好用的开源系统、更是一整套优质的开源生态内容体系。铭飞的使命就是降低开发成本提高开发效率，提供全方位的企业级开发解决方案。</p><p style="box-sizing: border-box; outline: 0px; margin-top: 0px; margin-bottom: 16px; padding: 0px; font-size: 14px; white-space: normal; color: rgb(77, 77, 77); overflow: auto hidden; overflow-wrap: break-word; font-family: -apple-system, &quot;SF UI Text&quot;, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif, SimHei, SimSun; background-color: rgb(255, 255, 255); line-height: 26px !important;">　　使用技术：</p><p style="box-sizing: border-box; outline: 0px; margin-top: 0px; margin-bottom: 16px; padding: 0px; font-size: 14px; white-space: normal; color: rgb(77, 77, 77); overflow: auto hidden; overflow-wrap: break-word; font-family: -apple-system, &quot;SF UI Text&quot;, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif, SimHei, SimSun; background-color: rgb(255, 255, 255); line-height: 26px !important;">　　核心框架：Spring Framework 4</p><p style="box-sizing: border-box; outline: 0px; margin-top: 0px; margin-bottom: 16px; padding: 0px; font-size: 14px; white-space: normal; color: rgb(77, 77, 77); overflow: auto hidden; overflow-wrap: break-word; font-family: -apple-system, &quot;SF UI Text&quot;, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif, SimHei, SimSun; background-color: rgb(255, 255, 255); line-height: 26px !important;">　　安全框架：Apache Shiro 1.2</p><p style="box-sizing: border-box; outline: 0px; margin-top: 0px; margin-bottom: 16px; padding: 0px; font-size: 14px; white-space: normal; color: rgb(77, 77, 77); overflow: auto hidden; overflow-wrap: break-word; font-family: -apple-system, &quot;SF UI Text&quot;, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif, SimHei, SimSun; background-color: rgb(255, 255, 255); line-height: 26px !important;">　　视图框架：Spring MVC 4</p><p style="box-sizing: border-box; outline: 0px; margin-top: 0px; margin-bottom: 16px; padding: 0px; font-size: 14px; white-space: normal; color: rgb(77, 77, 77); overflow: auto hidden; overflow-wrap: break-word; font-family: -apple-system, &quot;SF UI Text&quot;, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif, SimHei, SimSun; background-color: rgb(255, 255, 255); line-height: 26px !important;">　　任务调度：Spring Task 4</p><p style="box-sizing: border-box; outline: 0px; margin-top: 0px; margin-bottom: 16px; padding: 0px; font-size: 14px; white-space: normal; color: rgb(77, 77, 77); overflow: auto hidden; overflow-wrap: break-word; font-family: -apple-system, &quot;SF UI Text&quot;, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif, SimHei, SimSun; background-color: rgb(255, 255, 255); line-height: 26px !important;">　　持久层框架：MyBatis 3</p><p style="box-sizing: border-box; outline: 0px; margin-top: 0px; margin-bottom: 16px; padding: 0px; font-size: 14px; white-space: normal; color: rgb(77, 77, 77); overflow: auto hidden; overflow-wrap: break-word; font-family: -apple-system, &quot;SF UI Text&quot;, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif, SimHei, SimSun; background-color: rgb(255, 255, 255); line-height: 26px !important;">　　数据库连接池：Alibaba Druid 1.0</p><p style="box-sizing: border-box; outline: 0px; margin-top: 0px; margin-bottom: 16px; padding: 0px; font-size: 14px; white-space: normal; color: rgb(77, 77, 77); overflow: auto hidden; overflow-wrap: break-word; font-family: -apple-system, &quot;SF UI Text&quot;, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif, SimHei, SimSun; background-color: rgb(255, 255, 255); line-height: 26px !important;">　　日志管理：SLF4J 1.7、Log4j</p><p style="box-sizing: border-box; outline: 0px; margin-top: 0px; margin-bottom: 16px; padding: 0px; font-size: 14px; white-space: normal; color: rgb(77, 77, 77); overflow: auto hidden; overflow-wrap: break-word; font-family: -apple-system, &quot;SF UI Text&quot;, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif, SimHei, SimSun; background-color: rgb(255, 255, 255); line-height: 26px !important;">　　JS框架：jQuery 1.10</p><p style="box-sizing: border-box; outline: 0px; margin-top: 0px; margin-bottom: 16px; padding: 0px; font-size: 14px; white-space: normal; color: rgb(77, 77, 77); overflow: auto hidden; overflow-wrap: break-word; font-family: -apple-system, &quot;SF UI Text&quot;, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif, SimHei, SimSun; background-color: rgb(255, 255, 255); line-height: 26px !important;">　　CSS框架：Twitter Bootstrap 2.3.1。</p><p style="box-sizing: border-box; outline: 0px; margin-top: 0px; margin-bottom: 16px; padding: 0px; font-size: 14px; white-space: normal; color: rgb(77, 77, 77); overflow: auto hidden; overflow-wrap: break-word; font-family: -apple-system, &quot;SF UI Text&quot;, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif, SimHei, SimSun; background-color: rgb(255, 255, 255); line-height: 26px !important;">　　富文本：Ueditor</p><p style="box-sizing: border-box; outline: 0px; margin-top: 0px; margin-bottom: 16px; padding: 0px; font-size: 14px; white-space: normal; color: rgb(77, 77, 77); overflow: auto hidden; overflow-wrap: break-word; font-family: -apple-system, &quot;SF UI Text&quot;, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif, SimHei, SimSun; background-color: rgb(255, 255, 255); line-height: 26px !important;">　　项目预览图：</p><p style="box-sizing: border-box; outline: 0px; margin-top: 0px; margin-bottom: 16px; padding: 0px; font-size: 14px; white-space: normal; color: rgb(77, 77, 77); overflow: auto hidden; overflow-wrap: break-word; font-family: -apple-system, &quot;SF UI Text&quot;, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif, SimHei, SimSun; background-color: rgb(255, 255, 255); line-height: 26px !important;"><img alt="国内有哪些较好的Java开源CMS建站系统？" src="http://localhost:8080/upload/1/cms/content/editor/1610000932423.jpg" class="has" style="box-sizing: border-box; outline: none; height: auto; max-width: 100%; border: 0px; overflow-wrap: break-word; cursor: zoom-in;"/></p><p style="box-sizing: border-box; outline: 0px; margin-top: 0px; margin-bottom: 16px; padding: 0px; font-size: 14px; white-space: normal; color: rgb(77, 77, 77); overflow: auto hidden; overflow-wrap: break-word; font-family: -apple-system, &quot;SF UI Text&quot;, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif, SimHei, SimSun; background-color: rgb(255, 255, 255); line-height: 26px !important;"><img alt="国内有哪些较好的Java开源CMS建站系统？" src="http://localhost:8080/upload/1/cms/content/editor/1610000932622.jpg" class="has" style="box-sizing: border-box; outline: none; height: auto; max-width: 100%; border: 0px; overflow-wrap: break-word; cursor: zoom-in;"/></p><p><br/></p> </span> 
+      </div> 
+      <div class="news-pre"> 
+       <span class="label"> 上一篇: </span>
+       已经没有了
+      </div> 
+      <div class="news-next"> 
+       <span class="label"> 下一篇: </span>
+       已经没有了
+      </div> 
+     </div> 
+    </div> 
+    <!--新闻详情-end--> 
+   </div> 
+<!--<div class="ms-footer"> -->
+<!-- <div class="body"> -->
+<!--  <div class="top"> -->
+<!--   <div class="top-left">-->
+<!--      -->
+<!--    <div class="foot-nav"> -->
+<!--     <a href="http://localhost:8080/html/web/tuanduijieshao/index.html" class="nav-item"> 团队介绍 </a>  -->
+<!--    </div>  -->
+<!--    <div class="foot-nav"> -->
+<!--     <a href="http://localhost:8080/html/web/keyanxiangmu/index.html" class="nav-item"> 科研项目 </a>  -->
+<!--     <div> -->
+<!--      <a href="http://localhost:8080/html/web/keyanxiangmu/zongxiangkeyan/index.html" class="item"> 纵向科研 </a> -->
+<!--     </div>  -->
+<!--     <div> -->
+<!--      <a href="http://localhost:8080/html/web/keyanxiangmu/hengxiangkeyan/index.html" class="item"> 横向科研 </a> -->
+<!--     </div>  -->
+<!--    </div>  -->
+<!--    <div class="foot-nav"> -->
+<!--     <a href="http://localhost:8080/html/web/lunwenzhuzuo/index.html" class="nav-item"> 论文著作 </a>  -->
+<!--     <div> -->
+<!--      <a href="http://localhost:8080/html/web/lunwenzhuzuo/papers/index.html" class="item"> 论文著作 </a> -->
+<!--     </div>  -->
+<!--     <div> -->
+<!--      <a href="http://localhost:8080/html/web/lunwenzhuzuo/ruanjianzhuozuoquan/index.html" class="item"> 软件著作权 </a> -->
+<!--     </div>  -->
+<!--     <div> -->
+<!--      <a href="http://localhost:8080/html/web/lunwenzhuzuo/famingzhuanli/index.html" class="item"> 发明专利 </a> -->
+<!--     </div>  -->
+<!--    </div>  -->
+<!--    <div class="foot-nav"> -->
+<!--     <a href="http://localhost:8080/html/web/tuanduidongtai/index.html" class="nav-item"> 团队动态 </a>  -->
+<!--    </div>  -->
+<!--    <div class="foot-nav"> -->
+<!--     <a href="http://localhost:8080/html/web/tuanduichengyuan/index.html" class="nav-item"> 团队成员 </a>  -->
+<!--    </div>  -->
+<!--    <div class="foot-nav"> -->
+<!--     <a href="http://localhost:8080/html/web/lianxiwomen1398269395334127618/index.html" class="nav-item"> 联系我们 </a>  -->
+<!--    </div>  -->
+<!--   </div> -->
+<!--   <div class="top-right"> -->
+<!--    <div class="qr"> -->
+<!--     <img title="" alt="" src="http://localhost:8080/template/1/default/images/sw.png" class="pic">-->
+<!--     <span class="text"> 商务微信 </span>-->
+<!--    </div> -->
+<!--    <div class="qr"> -->
+<!--     <img title="" alt="" src="http://localhost:8080/template/1/default/images/gzh.png" class="pic">-->
+<!--     <span class="text"> 公众号 </span> -->
+<!--    </div> -->
+<!--   </div> -->
+<!--  </div> -->
+<!--  <span class="copyright"> <el-link href="https://www.mingsoft.net/" type="primary">© 江西铭软科技有限公司</el-link> 2012-至今 All Rights Reserved. Powered by MCms </span>-->
+<!--  <span class="power"> @该网页由 <el-link href="https://designer.mingsoft.net/" type="primary">MDesigner</el-link> 制作完成 </span>-->
+<!-- </div> -->
+<!--</div>-->
+
+
+<div class="ms-footer" style="width: 100%;margin: 0 auto;background-color: #55557f;padding-bottom: 0;height: 20px;">
+ <div class="body">
+
+  <div class="row" style="width: 100%;margin: 0 auto;;padding-bottom: 0;">
+   <p style="text-align: center;color: whitesmoke;padding-bottom: 0;line-height: 10px;vertical-align: middle;margin-top: 5px;">Copyright © 2021-2022 课题组网站 </p>
+  </div>
+  <!--<div class="top">
+   <div class="top-left">
+    <div class="foot-nav">
+     <a href="http://localhost:8080/html/web/tuanduijieshao/index.html" class="nav-item"> 团队介绍 </a> 
+    </div>     <div class="foot-nav">
+     <a href="http://localhost:8080/html/web/keyanxiangmu/index.html" class="nav-item"> 科研项目 </a> 
+     <div>
+      <a href="http://localhost:8080/html/web/keyanxiangmu/zongxiangkeyan/index.html" class="item"> 纵向科研 </a>
+     </div> 
+     <div>
+      <a href="http://localhost:8080/html/web/keyanxiangmu/hengxiangkeyan/index.html" class="item"> 横向科研 </a>
+     </div> 
+    </div>     <div class="foot-nav">
+     <a href="http://localhost:8080/html/web/lunwenzhuzuo/index.html" class="nav-item"> 论文著作 </a> 
+     <div>
+      <a href="http://localhost:8080/html/web/lunwenzhuzuo/papers/index.html" class="item"> 论文著作 </a>
+     </div> 
+     <div>
+      <a href="http://localhost:8080/html/web/lunwenzhuzuo/ruanjianzhuozuoquan/index.html" class="item"> 软件著作权 </a>
+     </div> 
+     <div>
+      <a href="http://localhost:8080/html/web/lunwenzhuzuo/famingzhuanli/index.html" class="item"> 发明专利 </a>
+     </div> 
+    </div>     <div class="foot-nav">
+     <a href="http://localhost:8080/html/web/tuanduidongtai/index.html" class="nav-item"> 团队动态 </a> 
+    </div>     <div class="foot-nav">
+     <a href="http://localhost:8080/html/web/tuanduichengyuan/index.html" class="nav-item"> 团队成员 </a> 
+    </div>     <div class="foot-nav">
+     <a href="http://localhost:8080/html/web/lianxiwomen1398269395334127618/index.html" class="nav-item"> 联系我们 </a> 
+    </div> 
+   </div>
+   <div class="top-right">
+    <div class="qr">
+     <img title="" alt="" src="http://localhost:8080/template/1/default/images/sw.png" class="pic">
+     <span class="text"> 商务微信 </span>
+    </div>
+    <div class="qr">
+     <img title="" alt="" src="http://localhost:8080/template/1/default/images/gzh.png" class="pic">
+     <span class="text"> 公众号 </span>
+    </div>
+   </div>
+  </div>
+  <span class="copyright"> <el-link href="https://www.mingsoft.net/" type="primary">© 江西铭软科技有限公司</el-link> 2012-至今 All Rights Reserved. Powered by MCms </span>
+  <span class="power"> @该网页由 <el-link href="https://designer.mingsoft.net/" type="primary">MDesigner</el-link> 制作完成 </span>-->
+ </div>
+</div>  </div>   
+  <script>
+var app = new Vue({
+    el: '#app',
+    watch:{
+    },
+    data: {
+    },
+    methods: {
+       switchShow:function(arr){
+       var that = this
+           arr.forEach(function(x){
+              let e = that.$el.querySelector("#key_"+x)
+               if(e){
+                   e.style.display=e.style.display=='none'?'flex':'none'
+               }
+           })
+       },
+    },
+    created(){
+    }
+})
+</script> 
+  <style>
+    body {
+        background-color:#fff;
+        box-sizing:border-box;
+        font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Segoe UI", "Helvetica Neue", "PingFang SC", "Noto Sans", "Noto Sans CJK SC", "Microsoft YaHei", 微软雅黑, sans-serif;
+        moz-box-sizing:border-box;
+        webkit-box-sizing:border-box;
+    }
+
+    .content 
+    {
+            align-items:flex-start;
+            flex-direction:row;
+            display:flex;
+            padding-right:0px;
+            box-sizing:border-box;
+            justify-content:center;
+            padding-bottom:0px;
+            flex-wrap:nowrap;
+            width:100%;
+            margin-bottom:0px;
+            padding-top:0px;
+            padding-left:0px;
+            margin-top:0px;
+    }
+    .content .body 
+    {
+            padding-bottom:20px;
+            flex-wrap:nowrap;
+            flex-direction:row;
+            display:flex;
+            padding-right:0px;
+            width:1200px;
+            box-sizing:border-box;
+            margin-bottom:0px;
+            padding-top:20px;
+            padding-left:0px;
+            margin-top:0px;
+    }
+    .content .body .left 
+    {
+            padding-bottom:0px;
+            flex-wrap:nowrap;
+            flex-direction:column;
+            display:flex;
+            padding-right:0px;
+            width:200px;
+            box-sizing:border-box;
+            padding-top:0px;
+            padding-left:0px;
+            margin-top:0px;
+            height:100%;
+    }
+    .content .body .left .title 
+    {
+            border-bottom-color:#C0C4CC;
+            color:#C0C4CC;
+            flex-direction:row;
+            word-wrap:break-word;
+            display:inline-block;
+            font-size:16PX;
+            border-bottom-style:dashed;
+            padding-top:10px;
+            border-bottom-width:1px;
+            padding-left:10px;
+            margin-top:0px;
+            height:40px;
+    }
+    .content .body .left .sub-title-sel 
+    {
+            background-color:#F2F6FC;
+            color:#409EFF;
+            flex-direction:row;
+            word-wrap:break-word;
+            display:inline-block;
+            font-size:16PX;
+            padding-top:10px;
+            padding-left:10px;
+            margin-top:2px;
+            height:40px;
+    }
+    .content .body .left .sub-title 
+    {
+            color:#5F5F5F;
+            flex-direction:row;
+            word-wrap:break-word;
+            display:inline-block;
+            font-size:16PX;
+            padding-top:10px;
+            padding-left:10px;
+            margin-top:0px;
+            height:40px;
+    }
+    .content .body .right 
+    {
+            align-items:center;
+            flex-direction:column;
+            display:flex;
+            padding-right:0px;
+            box-sizing:border-box;
+            justify-content:center;
+            padding-bottom:0px;
+            flex-wrap:nowrap;
+            width:1000px;
+            margin-bottom:0px;
+            padding-top:0px;
+            padding-left:20px;
+            margin-top:0px;
+            height:100%;
+    }
+    .content .body .right .ms-channel-path 
+    {
+            align-items:center;
+            flex-direction:row;
+            display:flex;
+            box-sizing:border-box;
+            margin-left:auto;
+            margin-right:auto;
+            padding-bottom:0px;
+            flex-wrap:nowrap;
+            width:100%;
+            margin-bottom:10px;
+            padding-top:0px;
+            margin-top:10px;
+            height:30px;
+    }
+    .content .body .right .ms-channel-path span 
+    {
+            color:#909399;
+            flex-direction:row;
+            word-wrap:break-word;
+            display:inline-block;
+            font-size:16PX;
+    }
+    .content .body .right .ms-channel-path .ms-channel-path-index 
+    {
+            cursor:pointer;
+            color:#000;
+            font-size:16PX;
+            text-decoration:none;
+            margin-bottom:0px;
+            margin-top:0px;
+    }
+    .content .body .right .ms-channel-path >i 
+    {
+    }
+    .content .body .right .ms-channel-path .ms-channel-path-link 
+    {
+            cursor:pointer;
+            color:#000;
+            font-size:16PX;
+            text-decoration:none;
+            margin-bottom:0px;
+            margin-top:0px;
+    }
+    .content .body .right .big-title 
+    {
+            text-align:center;
+            flex-direction:row;
+            word-wrap:break-word;
+            display:inline-block;
+            font-size:22PX;
+            padding-left:0px;
+    }
+    .content .body .right .news-date-hit 
+    {
+            margin-right:0px;
+            align-items:center;
+            flex-wrap:nowrap;
+            flex-direction:row;
+            display:flex;
+            width:100%;
+            box-sizing:border-box;
+            padding-left:0px;
+            justify-content:center;
+            height:40px;
+    }
+    .content .body .right .news-date-hit span 
+    {
+            color:#909399;
+            flex-direction:row;
+            word-wrap:break-word;
+            display:inline-block;
+            font-size:16PX;
+    }
+    .content .body .right .news-date-hit .date 
+    {
+            margin-right:20px;
+            color:#909399;
+            flex-direction:row;
+            word-wrap:break-word;
+            display:inline-block;
+            font-size:16PX;
+            margin-left:0px;
+    }
+    .content .body .right .news-body 
+    {
+            margin-right:0px;
+            padding-bottom:0px;
+            flex-wrap:nowrap;
+            flex-direction:column;
+            display:flex;
+            width:100%;
+            box-sizing:border-box;
+            margin-bottom:0px;
+            padding-top:0px;
+            margin-top:0px;
+            margin-left:0px;
+    }
+    .content .body .right .news-body span 
+    {
+            flex-direction:row;
+            word-wrap:break-word;
+            display:inline-block;
+            font-size:14px;
+    }
+    .content .body .right .news-pre 
+    {
+            margin-right:0px;
+            padding-bottom:0px;
+            align-items:center;
+            flex-wrap:nowrap;
+            flex-direction:row;
+            display:flex;
+            width:100%;
+            box-sizing:border-box;
+            padding-top:0px;
+            justify-content:flex-start;
+            margin-left:0px;
+            height:40px;
+    }
+    .content .body .right .news-pre .label 
+    {
+            margin-right:10px;
+            color:#909399;
+            flex-direction:row;
+            word-wrap:break-word;
+            display:inline-block;
+            font-size:16PX;
+            padding-top:0px;
+    }
+    .content .body .right .news-pre a 
+    {
+            margin-right:0px;
+            flex-direction:row;
+            word-wrap:break-word;
+            display:inline-block;
+            font-size:16PX;
+            padding-top:0px;
+    }
+    .content .body .right .news-next 
+    {
+            margin-right:0px;
+            padding-bottom:0px;
+            align-items:center;
+            flex-wrap:nowrap;
+            flex-direction:row;
+            display:flex;
+            width:100%;
+            box-sizing:border-box;
+            padding-top:0px;
+            justify-content:flex-start;
+            margin-left:0px;
+            height:40px;
+    }
+    .content .body .right .news-next .label 
+    {
+            margin-right:10px;
+            color:#909399;
+            flex-direction:row;
+            word-wrap:break-word;
+            display:inline-block;
+            font-size:16PX;
+            padding-top:0px;
+    }
+    .content .body .right .news-next a 
+    {
+            margin-right:0px;
+            flex-direction:row;
+            word-wrap:break-word;
+            display:inline-block;
+            font-size:16PX;
+            padding-top:0px;
+    }
+@media (max-width: 768px){
+        .content 
+        {
+                align-items:center;
+                flex-direction:row;
+                display:flex;
+                padding-right:0px;
+                box-sizing:border-box;
+                justify-content:center;
+                padding-bottom:0px;
+                flex-wrap:nowrap;
+                width:100%;
+                margin-bottom:0px;
+                padding-top:0px;
+                padding-left:0px;
+                margin-top:0px;
+        }
+        .content .body 
+        {
+                padding-bottom:20px;
+                align-items:center;
+                flex-wrap:wrap;
+                flex-direction:row;
+                display:flex;
+                padding-right:0px;
+                width:100%;
+                box-sizing:border-box;
+                padding-top:20px;
+                padding-left:0px;
+                justify-content:center;
+        }
+        .content .body .left 
+        {
+                padding-bottom:0px;
+                flex-wrap:nowrap;
+                flex-direction:column;
+                display:flex;
+                padding-right:0px;
+                width:90%;
+                box-sizing:border-box;
+                padding-top:0px;
+                padding-left:0px;
+                margin-top:0px;
+                height:100%;
+        }
+        .content .body .left .sub-title-sel 
+        {
+                background-color:#F2F6FC;
+                color:#409EFF;
+                flex-direction:row;
+                word-wrap:break-word;
+                display:inline-block;
+                font-size:16PX;
+                padding-top:10px;
+                padding-left:10px;
+                margin-top:2px;
+                height:40px;
+        }
+        .content .body .left .sub-title 
+        {
+                color:#5F5F5F;
+                flex-direction:row;
+                word-wrap:break-word;
+                display:inline-block;
+                font-size:16PX;
+                padding-top:10px;
+                padding-left:10px;
+                margin-top:0px;
+                height:40px;
+        }
+        .content .body .right 
+        {
+                padding-bottom:0px;
+                flex-wrap:nowrap;
+                flex-direction:column;
+                display:flex;
+                padding-right:0px;
+                width:90%;
+                margin-bottom:0px;
+                box-sizing:border-box;
+                padding-top:0px;
+                padding-left:0px;
+                margin-top:0px;
+        }
+        .content .body .right .ms-channel-path 
+        {
+                margin-right:auto;
+                align-items:center;
+                flex-wrap:nowrap;
+                flex-direction:row;
+                display:flex;
+                width:100%;
+                margin-bottom:10px;
+                box-sizing:border-box;
+                margin-top:10px;
+                height:30px;
+                margin-left:auto;
+        }
+        .content .body .right .ms-channel-path span 
+        {
+                color:#5F5F5F;
+                flex-direction:row;
+                word-wrap:break-word;
+                display:inline-block;
+                font-size:16PX;
+                padding-top:0px;
+                padding-left:0px;
+        }
+        .content .body .right .ms-channel-path .ms-channel-path-index 
+        {
+                cursor:pointer;
+                color:#000;
+                font-size:16PX;
+                text-decoration:none;
+                margin-bottom:0px;
+                margin-top:0px;
+        }
+        .content .body .right .ms-channel-path .ms-channel-path-link 
+        {
+                cursor:pointer;
+                color:#000;
+                font-size:16PX;
+                text-decoration:none;
+                margin-bottom:0px;
+                margin-top:0px;
+        }
+        .content .body .right .big-title 
+        {
+                flex-direction:row;
+                word-wrap:break-word;
+                display:inline-block;
+                font-size:22PX;
+                padding-left:0px;
+        }
+        .content .body .right .news-date-hit 
+        {
+                margin-right:0px;
+                align-items:center;
+                flex-wrap:nowrap;
+                flex-direction:row;
+                display:flex;
+                width:100%;
+                box-sizing:border-box;
+                padding-left:0px;
+                justify-content:center;
+                height:40px;
+        }
+        .content .body .right .news-date-hit span 
+        {
+                color:#909399;
+                flex-direction:row;
+                word-wrap:break-word;
+                display:inline-block;
+                font-size:16PX;
+        }
+        .content .body .right .news-date-hit .date 
+        {
+                margin-right:20px;
+                color:#909399;
+                flex-direction:row;
+                word-wrap:break-word;
+                display:inline-block;
+                font-size:16PX;
+                margin-left:0px;
+        }
+        .content .body .right .news-body 
+        {
+                margin-right:0px;
+                padding-bottom:0px;
+                flex-wrap:nowrap;
+                flex-direction:column;
+                display:flex;
+                width:100%;
+                box-sizing:border-box;
+                margin-bottom:0px;
+                padding-top:0px;
+                margin-top:0px;
+                height:300px;
+                margin-left:0px;
+          height: unset;
+        }
+        .content .body .right .news-body span 
+        {
+                flex-direction:row;
+                word-wrap:break-word;
+                display:inline-block;
+                font-size:14px;
+        }
+        .content .body .right .news-pre 
+        {
+                margin-right:0px;
+                padding-bottom:0px;
+                align-items:center;
+                flex-wrap:nowrap;
+                flex-direction:row;
+                display:flex;
+                width:100%;
+                box-sizing:border-box;
+                padding-top:0px;
+                justify-content:flex-start;
+                margin-left:0px;
+                height:40px;
+        }
+        .content .body .right .news-pre .label 
+        {
+                margin-right:10px;
+                color:#909399;
+                flex-direction:row;
+                word-wrap:break-word;
+                display:inline-block;
+                font-size:16PX;
+                padding-top:0px;
+        }
+        .content .body .right .news-pre a 
+        {
+                margin-right:0px;
+                flex-direction:row;
+                word-wrap:break-word;
+                display:inline-block;
+                font-size:16PX;
+                padding-top:0px;
+        }
+        .content .body .right .news-next 
+        {
+                margin-right:0px;
+                padding-bottom:0px;
+                align-items:center;
+                flex-wrap:nowrap;
+                flex-direction:row;
+                display:flex;
+                width:100%;
+                box-sizing:border-box;
+                padding-top:0px;
+                justify-content:flex-start;
+                margin-left:0px;
+                height:40px;
+        }
+        .content .body .right .news-next .label 
+        {
+                margin-right:10px;
+                color:#909399;
+                flex-direction:row;
+                word-wrap:break-word;
+                display:inline-block;
+                font-size:16PX;
+                padding-top:0px;
+        }
+        .content .body .right .news-next a 
+        {
+                margin-right:0px;
+                flex-direction:row;
+                word-wrap:break-word;
+                display:inline-block;
+                font-size:16PX;
+                padding-top:0px;
+        }
+
+}</style>
+ </body>
+</html>

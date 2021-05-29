@@ -1,0 +1,557 @@
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>铭飞MCms</title>
+  <meta http-equiv="content-type" content="text/html">
+  <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+  <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,width=device-width">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="app-mobile-web-app-capable" content="yes">
+  <meta name="app-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="keywords" content="铭飞MCMS">
+  <meta name="description" content="铭飞MCMS">
+  <script type="text/javascript" src="http://localhost:8080/static/plugins/vue/2.6.9/vue.min.js"></script>
+  <link rel="stylesheet" href="http://localhost:8080/static/plugins/minireset/0.0.2/minireset.min.css">
+  <link rel="stylesheet" href="https://cdn.mingsoft.net/iconfont/iconfont.css">
+  <link rel="stylesheet" href="http://localhost:8080/static/plugins/animate/4.1.0/animate.min.css">
+  <script src="http://localhost:8080/static/plugins/element-ui/2.12.0/index.js"></script>
+  <link rel="stylesheet" href="http://localhost:8080/static/plugins/element-ui/2.12.0/index.css">
+  <link rel="stylesheet" href="http://localhost:8080/template/1/default/css/app.css">
+  <!--网络请求框架-->
+  <script src="http://localhost:8080/static/plugins/axios/0.18.0/axios.min.js"></script>
+  <script src="http://localhost:8080/static/plugins/qs/6.6.0/qs.min.js"></script>
+  <script src="http://localhost:8080/static/plugins/ms/1.0.0/ms.js"></script>
+  <script src="http://localhost:8080/static/plugins/ms/1.0.0/ms.http.js"></script>
+  <script src="http://localhost:8080/static/plugins/ms/1.0.0/ms.util.js"></script>
+  <script>
+        ms.base = "";
+    </script>
+  <style>
+        [v-cloak]{
+            display: none;
+        }
+    </style>
+ </head>
+ <body>
+  <div id="app" v-cloak>
+<div class="ms-nav">
+ <div class="body"> 
+  <div class="logo">
+   <a href="http://localhost:8080">
+   <img title="" alt="" src="http://localhost:8080//upload/1/appLogo/1609397756549.png" class="logo-pic">
+   <img title="" alt="" src="https://www.mingsoft.net//template/1/ms/images/1596437934982.png" class="logo-desc">
+   </a>
+  </div>
+  <div @click="switchShow([&quot;1605172743000_96378&quot;]);" class="nav-h5">
+   <i class="iconfont icon-caidan nav-h5-icon"></i> 
+   <div id="key_1605172743000_96378" class="nav-h5-body" style="display: none">
+    <a href="http://localhost:8080" class="nav-h5-item"> 首页 </a>
+    <a href=" class="nav-h5-item ">
+     团队介绍
+    </a>
+    <a href=" class="nav-h5-item ">
+     科研项目
+    </a>
+    <a href=" class="nav-h5-item  sel">
+     论文著作
+    </a>
+    <a href=" class="nav-h5-item ">
+     团队动态
+    </a>
+    <a href=" class="nav-h5-item ">
+     团队成员
+    </a>
+    <a href=" class="nav-h5-item ">
+     联系我们
+    </a>
+   </div> 
+  </div> 
+  <div class="nav-item">
+   <a href="http://localhost:8080" class="item"> 首页 </a>
+
+   <a href="http://localhost:8080/html/web/tuanduijieshao/index.html" class="item">
+    团队介绍
+   </a>
+   <a href="http://localhost:8080/html/web/keyanxiangmu/zongxiangkeyan/index.html" class="item">
+    科研项目
+   </a>
+   <a href="http://localhost:8080/html/web/lunwenzhuzuo/papers/index.html" class="item sel">
+    论文著作
+   </a>
+   <a href="http://localhost:8080/html/web/tuanduidongtai/index.html" class="item">
+    团队动态
+   </a>
+   <a href="http://localhost:8080/html/web/tuanduichengyuan/index.html" class="item">
+    团队成员
+   </a>
+   <a href="http://localhost:8080/html/web/lianxiwomen1398269395334127618/index.html" class="item">
+    联系我们
+   </a>
+  </div>
+  <div class="nav-search" >
+   <!--搜索-start--> 
+   <form id="searchDataForm" style="border:1px solid #ff2416" action="http://localhost:8080/mcms/search.do" method="post" class="ms-search-input">
+    <div class="ms-search-input-div" >
+     <!--输入框 - start --> 
+     <input class="ms-input"  name="content_title" placeholder="输入搜索关键字">
+     <!--输入框 -end --> 
+    </div> 
+    <div class="ms-search-button" onclick="document.getElementById('searchDataForm').submit();"> 
+     <i class="iconfont icon-fangdajing" style="color: #ff2416"></i>
+    </div> 
+   </form> 
+   <!--搜索-end--> 
+  </div> 
+ </div> 
+</div>   <div class="news">
+    <div class="body">
+     <div class="left">
+      <span class="title"> 论文著作 </span>
+      <a href="http://localhost:8080/html/web/lunwenzhuzuo/papers/index.html" class="sub-title-sel"> 论文著作 </a>
+      <a href="http://localhost:8080/html/web/lunwenzhuzuo/ruanjianzhuozuoquan/index.html" class="sub-title"> 软件著作权 </a>
+      <a href="http://localhost:8080/html/web/lunwenzhuzuo/famingzhuanli/index.html" class="sub-title"> 发明专利 </a>
+     </div>
+     <div class="right">
+      <div class="ms-channel-path">
+       <span class="ms-channel-path-label"> 当前位置： </span>
+       <a href="/" class="ms-channel-path-index"> 首页 </a> 
+       <i class="iconfont icon-youjiantou"></i>
+       <a href="http://localhost:8080/html/web/lunwenzhuzuo/index.html" class="ms-channel-path-link"> 论文著作 </a> 
+       <i class="iconfont icon-youjiantou"></i>
+       <a href="http://localhost:8080/html/web/lunwenzhuzuo/papers/index.html" class="ms-channel-path-link"> 论文著作 </a> 
+      </div>
+      <span class="big-title"> </span>
+      <div class="news-body">
+       <span> <h4 style="box-sizing: border-box; font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-weight: 500; line-height: 1.1; color: rgb(51, 51, 51); margin-top: 10px; margin-bottom: 10px; font-size: 18px; white-space: normal; background-color: rgb(255, 255, 255);"><span style="box-sizing: border-box; font-weight: 700;">2021年</span></h4><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[361]. Gaoqi Weng, Chao Shen, Dongsheng Cao, Junbo Gao, Xiaowu Dong, Qiaojun He, Bo Yang, Dan Li*, Jian Wu*, Tingjun Hou*, PROTAC-DB: an online database of PROTACs,&nbsp;<em style="box-sizing: border-box;">Nucleic Acids Research</em>, 2021, 49(D1), D1381-D1387. [<a href="https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkaa807/5917660" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[360]. Hongyan Du, Junbo Gao, Gaoqi Weng, Junjie Ding, Xin Chai, Jinping Pang, Yu Kang, Dan Li, Dongsheng Cao*, Tingjun Hou*, CovalentInDB: a comprehensive database facilitating the discovery of covalent inhibitors,&nbsp;<em style="box-sizing: border-box;">Nucleic Acids Research</em>, 2021, 49(D1), D1122-D1129. [<a href="https://academic.oup.com/nar/article/49/D1/D1122/5929233" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[359]. Qing Ye, Xin Chai, Dejun Jiang, Liu Yang, Chao Shen, Xujun Zhang, Dan Li*, Dongsheng Cao*, Tingjun Hou*, Identification of Active Molecules against Mycobacterium Tuberculosis through Machine Learning,&nbsp;<em style="box-sizing: border-box;">Briefings in Bioinformatics</em>, 2021, accepted. [<a href="http://cadd.zju.edu.cn/publication#" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[358]. Zhenxing Wu, Dejun Jiang, Chang-Yu Hsieh, Guangyong Chen, Ben Liao, Dongsheng Cao*, Tingjun Hou*, Hyperbolic Relational Graph Convolution Networks Plus: a Simple but Highly Efficient QSAR-modeling Method,&nbsp;<em style="box-sizing: border-box;">Briefings in Bioinformatics</em>, 2021, accepted. [<a href="http://cadd.zju.edu.cn/publication#" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[357]. Jin-ping Pang, Chao Shen, Wen-fang Zhou, Yunxia Wang, Luhu Shan, Xin Chai, Ying Shao, Xueping Hu, Feng Zhu, Danyan Zhu, Li Xiao, Lei Xu, Xiaohong Xu, Dan Li*, Tingjun Hou*, Discovery of novel antagonists targeting the DNA binding domain of androgen receptor by integrated docking-based virtual screening and bioassays,&nbsp;<em style="box-sizing: border-box;">Acta Pharmacologica Sinica</em>, 2021, accepted. [<a href="http://cadd.zju.edu.cn/publication#" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[356]. Ziyi Yang, Zhijiang Yang, Yue Zhao, Mingzhu Yin, Aiping Lu, Xiang Chen, Shao Liu, Tingjun Hou*, Dongsheng Cao*, PySmash: Python package and individual executable program for representative substructure generation and application,&nbsp;<em style="box-sizing: border-box;">Briefings in Bioinformatics</em>, 2021, in press. [<a href="http://cadd.zju.edu.cn/publication#" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[355]. Yuan Wang, ZheWang, Jiacheng Liu, Yunwen Wang, Rui Wu, Rong Sheng*, Tingjun Hou*, Discovery of novel HBV capsid assembly modulators by structure-based virtual screening and bioassays,&nbsp;<em style="box-sizing: border-box;">Bioorganic &amp; Medicinal Chemistry</em>, 2021, 36, 116096. [<a href="https://www.sciencedirect.com/science/article/abs/pii/S0968089621001048" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[354]. Dejun Jiang, Zhenxing Wu, Chang-Yu Hsieh, Guangyong Chen, Ben Liao, Zhe Wang, Chao Shen, Dongsheng Cao*, Jian Wu*, Tingjun Hou*, Could graph neural networks learn better molecular representation for drug discovery? A comparison study of descriptor-based and graph-based models,&nbsp;<em style="box-sizing: border-box;">Journal of Cheminformatics</em>, 2021, 13, 12. [<a href="https://jcheminf.biomedcentral.com/articles/10.1186/s13321-020-00479-8" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[353]. Xujun Zhang, Chao Shen, Xueying Guo, Zhe Wang, Gaoqi Weng, Qing Ye, Gaoang Wang, Qiaojun He, Bo Yang*, Dongsheng Cao*, Tingjun Hou*, ASFP (Artificial Intelligence based Scoring Function Platform): a web server for the development of customized scoring functions,&nbsp;<em style="box-sizing: border-box;">Journal of Cheminformaticse</em>, 2021, 13, 6. [<a href="https://jcheminf.biomedcentral.com/articles/10.1186/s13321-021-00486-3" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[352]. Ziyi Yang, Zhijiang Yang, Junhong He, Aiping Lu, Shao Liu, Tingjun Hou*, Dongsheng Cao*, Benchmarking the mechanisms of frequent hitters: limitation of PAINS alerts,&nbsp;<em style="box-sizing: border-box;">Drug Discovery Today</em>, 2021, in press. [<a href="http://cadd.zju.edu.cn/publication#" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[351]. Li Fu, Ziyi Yang, Zhijiang Yang, Mingzhu Yin, Aiping Lu, Xiang Chen, Shao Liu, Tingjun Hou*, Dongsheng Cao*, QSAR-assisted-MMPA to expand chemical transformation space for lead optimization,&nbsp;<em style="box-sizing: border-box;">Briefings in Bioinformatics</em>, 2021, in press. [<a href="https://academic.oup.com/bib/advance-article-abstract/doi/10.1093/bib/bbaa374/6071857?redirectedFrom=fulltext" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[350]. Chao Shen, Gaoqi Weng, Xujun Zhang, Elaine Lai-Han Leung, Xiaojun Yao, Jinping Pang, Xin Chai, Dan Li, Ercheng Wang, Dongsheng Cao*, Tingjun Hou*, Accuracy or novelty: what can we gain from target-specific machine-learning-based scoring functions in virtual screening?,&nbsp;<em style="box-sizing: border-box;">Briefings in Bioinformatics</em>, 2021, in press. [<a href="https://academic.oup.com/bib/advance-article-abstract/doi/10.1093/bib/bbaa410/6070382?redirectedFrom=fulltext" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[349]. Zhenxing Wu, Minfeng Zhu, Yu Kang, Elaine Lai-Han Leung, Tailong Lei, Chao Shen, Dejun Jiang, Zhe Wang, Dongsheng Cao*, Tingjun Hou*, Do we need different machine learning algorithms for QSAR modeling? A comprehensive assessment of 16 machine learning algorithms on 14 QSAR data sets,&nbsp;<em style="box-sizing: border-box;">Briefings in Bioinformatics</em>, 2021, in press. [<a href="https://academic.oup.com/bib/advance-article-abstract/doi/10.1093/bib/bbaa321/6032614?redirectedFrom=fulltext" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[348]. Chao Shen, Ye Hu, Zhe Wang, Xujun Zhang, Haiyang Zhong, Gaoang Wang, Xiaojun Yao, Lei Xu, Dongsheng Cao*, Tingjun Hou*, Can machine learning consistently improve the scoring power of classical scoring functions? Insights into the role of machine learning in scoring functions&nbsp;<em style="box-sizing: border-box;">Briefings in Bioinformatics</em>,2021, 22, 497-514. [<a href="https://academic.oup.com/bib/advance-article/doi/10.1093/bib/bbz173/5715927" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[347]. Jingyu Zhu, Kan Li, Li Yu, Yun Chen, Yanfei Cai, Jian Jin*, Tingjun Hou*, Targeting phosphatidylinositol 3‐kinase gamma (PI3Kγ): Discovery and development of its selective inhibitors,&nbsp;<em style="box-sizing: border-box;">Medicinal Research Reviews</em>, 2021, in press. [<a href="https://onlinelibrary.wiley.com/doi/10.1002/med.21770" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[346]. Ziyi Yang, Jie Dong, Zhijiang Yang, Mingzhu Yin, Hongli Jiang, Aiping Lu, Xiang Chen, Tingjun Hou*, Dongsheng Cao*, ChemFLuo: a web-server for structure analysis and identification of fluorescent compounds,&nbsp;<em style="box-sizing: border-box;">Briefings in Bioinformatics</em>, 2021, in press. [<a href="https://academic.oup.com/bib/advance-article-abstract/doi/10.1093/bib/bbaa282/5985287?redirectedFrom=fulltext" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[325]. Jie Dong, Minfeng Zhu, Yonghuan Yun, Aiping Lu, Tingjun Hou*, Dongsheng Cao*, BioMedR: An R/CRAN Package for Integrated Data Analysis Pipeline in Biomedical Study,&nbsp;<em style="box-sizing: border-box;">Briefings in Bioinformatics</em>, 2021, in press. [<a href="https://academic.oup.com/bib/advance-article/doi/10.1093/bib/bbz150/5686256" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[344]. Ziyi Yang, Zhijiang Yang, Aiping Lu, Tingjun Hou*, Dongsheng Cao*, Scopy: an integrated negative design python library for desirable HTS/VS database design,&nbsp;<em style="box-sizing: border-box;">Briefings in Bioinformatics</em>, 2021, in press. [<a href="https://academic.oup.com/bib/advance-article/doi/10.1093/bib/bbaa194/5901981?searchresult=1" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[343]. Chao Shen, Ye Hu, Zhe Wang, Xujun Zhang, Jinping Pang, Gaoang Wang, Haiyang Zhong, Lei Xu, Dongsheng Cao*, Tingjun Hou*, Beware of the generic machine learning-based scoring functions in structure-based virtual screening,&nbsp;<em style="box-sizing: border-box;">Briefings in Bioinformatics</em>, 2021, in press. [<a href="https://academic.oup.com/bib/advance-article-abstract/doi/10.1093/bib/bbaa070/5850047?redirectedFrom=fulltext" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[342]. Guoli Xiong, Wenling Ye, Chao Shen, Aiping Lu, Tingjun Hou*, Dongsheng Cao*, Improving Structure-Based Virtual Screening Performance via Learning from Scoring Function Components,&nbsp;<em style="box-sizing: border-box;">Briefings in Bioinformatics</em>, 2021, in press. [<a href="https://academic.oup.com/bib/advance-article-abstract/doi/10.1093/bib/bbaa094/5851268?redirectedFrom=fulltext" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[341]. Jike Wang, Dongsheng Cao, Cunchen Tang, Lei Xu, Qiaojun He, Bo Yang, Xi Chen, Huiyong Sun, Tingjun Hou, DeepAtomicCharge: a new graph convolutional network-based architecture for accurate prediction of atomic charges,&nbsp;<em style="box-sizing: border-box;">Briefings in Bioinformatics</em>, 2021, in press. [<a href="https://academic.oup.com/bib/advance-article/doi/10.1093/bib/bbaa183/5896581" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><h4 style="box-sizing: border-box; font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-weight: 500; line-height: 1.1; color: rgb(51, 51, 51); margin-top: 10px; margin-bottom: 10px; font-size: 18px; white-space: normal; background-color: rgb(255, 255, 255);"><span style="box-sizing: border-box; font-weight: 700;">2020年</span></h4><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[340]. Suqing Yang, Qing Ye, Aiping Lu, Tingjun Hou*, Dongsheng Cao*, Current Advances in Ligand-based Target Prediction,&nbsp;<em style="box-sizing: border-box;">WIRES Computational Molecular Science</em>, 2020, e1504. [<a href="https://onlinelibrary.wiley.com/doi/10.1002/wcms.1504" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[339]. Zhiguo Wang*, Guo Li, Zhou Tian, Xiaoqin Lou, Yining Huang, Lihui Wang, Jianfeng Li*, Tingjun Hou*, and Junping Liu*, Insight Derived from Molecular Dynamics Simulation into the Selectivity Mechanism Targeting c-MYC G-Quadruplex,&nbsp;<em style="box-sizing: border-box;">Journal of Physical Chemistry B</em>, 2020, 124, 9773-9784. [<a href="https://pubs.acs.org/doi/10.1021/acs.jpcb.0c05029" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[338]. Jike Wang, Dongsheng Cao, Cunchen Tang, Xi Chen*, Huiyong Sun*, Tingjun Hou*, Fast and accurate prediction of partial charges using circular-atom-descriptor-based machine learning,&nbsp;<em style="box-sizing: border-box;">Bioinformatics</em>, 2020, 36, 4721-4728. [<a href="https://academic.oup.com/bioinformatics/advance-article/doi/10.1093/bioinformatics/btaa566/5856101" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[337]. Xueping Hu, Xin Chai, Xuwen Wang, Mojie Duan, Jinping Pang, Weitao Fu, Dan Li*, Tingjun Hou*, Advances in the computational development of androgen receptor antagonists,&nbsp;<em style="box-sizing: border-box;">Drug Discovery Today</em>, 2020, 25, 1453-146. [<a href="https://www.sciencedirect.com/science/article/pii/S1359644620301513" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[336]. Wenling Ye, Chao Shen, Guoli Xiong, Junjie Ding, Aiping Lu, Tingjun Hou*, Dongsheng Cao*, Improving Docking-Based Virtual Screening Ability by Integrating Multiple Energy Auxiliary Terms from Molecular Docking Scoring,&nbsp;<em style="box-sizing: border-box;">Journal of Chemical Information and Modeling</em>, 2020, 60, 4216-4230. [<a href="https://pubs.acs.org/doi/10.1021/acs.jcim.9b00977" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[335]. Gaoqi Weng, Junbo Gao, Zhe Wang, Ercheng Wang, Xueping Hu, Xiaojun Yao, Dongsheng Cao*, Tingjun Hou*, Comprehensive Evaluation of Fourteen Docking Programs on Protein-Peptide Complexes,&nbsp;<em style="box-sizing: border-box;">Journal of Chemical Theory and Computation</em>, 2020, 16, 3959-3969. [<a href="https://pubs.acs.org/doi/10.1021/acs.jctc.9b01208" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[334]. Yangshun Tang, Bo Feng, Yi Wang, Huiyong Sun, Yi You, Jie Yu, Bing Chen, Cengli Xu, Yeping Ruan, Sunliang Cui, Gang Hu, Tingjun Hou*, Zhong Chen*, Structure‐based discovery of caspase‐1 inhibitor with therapeutic potential for febrile seizures and later enhanced epileptogenic susceptibility,&nbsp;<em style="box-sizing: border-box;">British Journal of Pharmacology</em>, 2020, 17, 3519-3534. [<a href="https://bpspubs.onlinelibrary.wiley.com/doi/abs/10.1111/bph.15076" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[333].Ercheng Wang, Hui Liu, Junmei Wang, Gaoqi Weng, Huiyong Sun, Zhe Wang, Yu Kang, Tingjun Hou*, Development and Evaluation of MM/GBSA Based on a Variable Dielectric GB Model for Predicting Protein-Ligand Binding Affinities,&nbsp;<em style="box-sizing: border-box;">Journal of Chemical Information and Modeling</em>, 2020, 60, 5353-5365. [<a href="https://pubs.acs.org/doi/10.1021/acs.jcim.0c00024" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[332]. Ziyi Yang, Jie Dong, Zhijiang Yang, Aiping Lu, Tingjun Hou*, Dongsheng Cao*, Structural Analysis and Identification of False Positive Hits in Luciferase-Based Assays,&nbsp;<em style="box-sizing: border-box;">Journal of Chemical Information and Modeling</em>, 2020, 60, 2031-2042. [<a href="https://pubs.acs.org/doi/10.1021/acs.jcim.9b01188" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[331]. Qing Yu, Zhiguo Hu, Yanwen Shen, Yihang Jiang, Peichen Pan, Tingjun Hou, Zhenqiang Pan, Jing Huang, Yi Sun, Gossypol inhibits cullin neddylation by targeting SAG-CUL5 and RBX1-CUL1 complexes,&nbsp;<em style="box-sizing: border-box;">Neoplasia</em>, 2020, 22, 179-191. [<a href="https://www.sciencedirect.com/science/article/pii/S1476558619303938" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[330]. Li Fu, Lu Liu, Zhijiang Yang, Pan Li, Junjie Ding, Yonghuan Yun, Aiping Lu, Tingjun Hou*, Dongsheng Cao*, Systematic Modeling of log D7.4 Based on Ensemble Machine Learning, Group Contribution, and Matched Molecular Pair Analysis,&nbsp;<em style="box-sizing: border-box;">Journal of Chemical Information and Modeling</em>, 2020, 60, 63-76. [<a href="https://pubs.acs.org/doi/10.1021/acs.jcim.9b00718" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[329]. Dejun Jiang, Tailong Lei, Zhe Wang, Chao Shen, Dongsheng Cao*, Tingjun Hou*, ADMET Evaluation in Drug Discovery. 20. Prediction of Breast Cancer Resistance Protein Inhibition through Machine Learning,&nbsp;<em style="box-sizing: border-box;">Journal of Cheminformatics</em>, 2020, 12, 16. [<a href="http://cadd.zju.edu.cn/publication#" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[328]. Qin Tang, Weitao Fu, Minkui Zhang, Ercheng Wang, Lvhu Shan, Xin Chai, Jinping Pang, Xuwen Wang, Xiaohong Xu, Lei Xu, Dan Li*, Rong Sheng*, Tingjun Hou*, Novel androgen receptor antagonist identified by structure-based virtual screening, structural optimization, and biological evaluation,&nbsp;<em style="box-sizing: border-box;">European Journal of Medicinal Chemistry</em>, 2020, 192, 112156. [<a href="https://www.sciencedirect.com/science/article/abs/pii/S0223523420301239" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[327]. Ziyi Yang, Junhong He, Aiping Lu, Tingjun Hou*, Dongsheng Cao*, Frequent hitters: nuisance artifacts in high-throughput screening,&nbsp;<em style="box-sizing: border-box;">Drug Discovery Today</em>, 2020, 25, 657-667. [<a href="https://www.sciencedirect.com/science/article/pii/S1359644620300404" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[326]. Ziyi Yang, Junhong He, Aiping Lu, Tingjun Hou*, Dongsheng Cao*, The Application of Negative Design to Design More Desirable Virtual Screening Library,&nbsp;<em style="box-sizing: border-box;">Journal of Medicinal Chemistry</em>, 2020, 63, 4411–4429. [<a href="https://pubs.acs.org/doi/abs/10.1021/acs.jmedchem.9b01476" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[325]. Zhe Wang, Xuwen Wang, Yu Kang, HaiYang Zhong, Chao Shen, Xiaojun Yao, Dongsheng Cao*, Tingjun Hou*, Binding Affinity and Dissociation Pathway Predictions for a Series of USP7 Inhibitors with Pyrimidinone Scaffold by Multiple Computational Methods,&nbsp;<em style="box-sizing: border-box;">Physical Chemistry Chemical Physics</em>, 2020, 22, 5487-5499. [<a href="https://pubs.rsc.org/en/content/articlehtml/2020/cp/d0cp00370k" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[324]. Zhe Wang, Huiyong Sun, Chao Shen, Xueping Hu, Junbo Gao, Dan Li, Dongsheng Cao*, Tingjun Hou*, Combined Strategies in Structure-based Virtual Screening,&nbsp;<em style="box-sizing: border-box;">Physical Chemistry Chemical Physics</em>, 2020, 22, 3149-3159. [<a href="https://pubs.rsc.org/en/content/articlehtml/2020/cp/c9cp06303j" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[323]. Chao Shen, Junjie Ding, Zhe Wang, Dongsheng Cao, Xiaoqin Ding, Tingjun Hou*, From machine learning to deep learning: advances in scoring functions for computational docking,&nbsp;<em style="box-sizing: border-box;">WIRES Computational Molecular Science</em>, 2020, 10, e1429. [<a href="https://onlinelibrary.wiley.com/doi/full/10.1002/wcms.1429" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[322]. Chao Shen, Zhe Wang, Xiaojun Yao, Youyong Li, Tailong Lei, Ercheng Wang, Lei Xu, Feng Zhu, Dan Li, Tingjun Hou*, Comprehensive assessment of nine docking programs on Type II Kinase Inhibitors: prediction accuracy of sampling power, scoring power and screening power,&nbsp;<em style="box-sizing: border-box;">Briefings in Bioinformatics</em>, 2020, 21, 282-297. [<a href="https://academic.oup.com/bib/advance-article/doi/10.1093/bib/bby103/5144987" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><h4 style="box-sizing: border-box; font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-weight: 500; line-height: 1.1; color: rgb(51, 51, 51); margin-top: 10px; margin-bottom: 10px; font-size: 18px; white-space: normal; background-color: rgb(255, 255, 255);"><span style="box-sizing: border-box; font-weight: 700;">2019年</span></h4><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[321]. Zhenxing Wu, Tailong Lei, Chao Shen, Zhe Wang, Dongsheng Cao, Tingjun Hou*, ADMET Evaluation in Drug Discovery. 19. Reliable Prediction of Human Cytochrome P450 Inhibition Using Artificial Intelligence Approaches,&nbsp;<em style="box-sizing: border-box;">Journal of Chemical Information and Modeling</em>, 2019, 59, 4587-4601. [<a href="https://pubs.acs.org/doi/abs/10.1021/acs.jcim.9b00801" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[320]. Haiyang Zhong, Zhe Wang, Xuwen Wang, Hui Liu, Dan Li, Huanxiang Liu, Xiaojun Yao* and Tingjun Hou*, Importance of crystalline water network in docking-based virtual screening: a case study of BRD4,&nbsp;<em style="box-sizing: border-box;">Physical Chemistry Chemical Physics</em>, 2019, 21, 25276-25289. [<a href="https://pubs.rsc.org/en/content/articlelanding/2019/cp/c9cp04290c/unauth#!divAbstract" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[319]. Jie Yu, Tianli Xie, Zhe Wang, Xuwen Wang, Su Zeng, Yu Kang*, Tingjun Hou*, DNA Methyltransferases: Emerging Targets for the Discovery of Inhibitors as Potent Anticancer Drugs,&nbsp;<em style="box-sizing: border-box;">Drug Discovery Today</em>, 2019, 24, 2323-2331.. [<a href="https://www.sciencedirect.com/science/article/pii/S1359644619303344?via%3Dihub" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[318]. Ziyi Yang, Zhijiang Yang, Jie Dong, Liangliang Wang, Liuxia Zhang, Junjie Ding, Xiaoqin Ding, Aiping Lu, Tingjun Hou*, Dongsheng Cao*, Structural Analysis and Identification of Colloidal Aggregators in Drug Discovery,&nbsp;<em style="box-sizing: border-box;">Journal of Chemical Information and Modeling</em>, 2019, 59, 3714-3726. [<a href="https://pubs.acs.org/doi/abs/10.1021/acs.jcim.9b00541" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[317]. Xiaotian Kong, Peichen Pan, Huiyong Sun, Hongguang Xia, Xuwen Wang, Youyong Li, Tingjun Hou*, Drug discovery targeting anaplastic lymphoma kinase (ALK),&nbsp;<em style="box-sizing: border-box;">Journal of Medicinal Chemistry</em>, 2019, 62, 10927-10954. [<a href="https://pubs.acs.org/doi/abs/10.1021/acs.jmedchem.9b00446" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[316]. Ercheng Wang, Gaoqi Weng, Huiyong Sun, Hongyan Du, Feng Zhu, Fu Chen, Zhe Wang, Tingjun Hou*, Assessing the performance of the MM/PBSA and MM/GBSA methods. 10. Impacts of Enhanced Sampling and Variable Dielectric Model on Protein-Protein Interactions,&nbsp;<em style="box-sizing: border-box;">Physical Chemistry Chemical Physics</em>, 2019, 21, 18958-18969. [<a href="https://pubs.rsc.org/en/content/articlelanding/2019/CP/C9CP04096J#!divAbstract" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; font-size: 16px;">[315]. Ercheng Wang, Huiyong Sun, Junmei Wang, Zhe Wang, Hui Liu, John Z.H. Zhang*, Tingjun Hou*, End-Point binding free energy calculation with MM/PBSA and MM/GBSA: strategies and applications in drug design,&nbsp;<em style="box-sizing: border-box;">Chemical Reviews</em>, 2019, 119, 9478-9508. [<a href="https://pubs.acs.org/doi/abs/10.1021/acs.chemrev.9b00055" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p><img alt="" class="media-object" src="/upload/1/cms/content/editor/1622196671424.png" style="box-sizing: border-box; border: 0px; vertical-align: middle; display: block;"/></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[314]. Gaoqi Weng, Ercheng Wang, Zhe Wang, Hui Liu, Feng Zhu, Dan Li, Tingjun Hou*, HawkDock: a web server to predict and analyze the protein-protein complex based on computational docking and MM/GBSA,&nbsp;<em style="box-sizing: border-box;">Nucleic Acids Research</em>, 2019, 47, W322-W330. [<a href="https://academic.oup.com/nar/article/47/W1/W322/5491747" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; font-size: 16px;">[313]. Dan Li, Wenfang Zhou, Jinping Pang, Qin Tang, Bingling Zhong, Chao Shen, Li Xiao, Tingjun Hou*, A magic drug target: androgen receptor,&nbsp;<em style="box-sizing: border-box;">Medicinal Research Reviews</em>, 2019, 39, 1485-1514. [<a href="https://onlinelibrary.wiley.com/doi/full/10.1002/med.21558" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p><img alt="" class="media-object" src="/upload/1/cms/content/editor/1622196671552.png" style="box-sizing: border-box; border: 0px; vertical-align: middle; display: block;"/></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[312]. Gaoqi Weng, Ercheng Wang, Fu Chen, Huiyong Sun, Zhe Wang, Tingjun Hou*, Assessing the performance of the MM/PBSA and MM/GBSA methods. 9. Prediction reliability of binding affinities and binding poses for protein-peptide complexes,&nbsp;<em style="box-sizing: border-box;">Physical Chemistry Chemical Physics</em>, 2019, 21, 10135-10145. [<a href="https://pubs.rsc.org/en/content/articlelanding/2019/cp/c9cp01674k/unauth#!divAbstract" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[311]. Zhe Wang, Xuwen Wang, Youyong Li, Tailong Lei, Ercheng Wang, Dan Li, Yu Kang, Feng Zhu, Tingjun Hou*, farPPI: a webserver for accurate prediction of protein-ligand binding structures for small-molecule PPI inhibitors by MM/PB(GB)SA methods,&nbsp;<em style="box-sizing: border-box;">Bioinformatics</em>,&nbsp;2019, 35, 1777–1779. [<a href="https://academic.oup.com/bioinformatics/article/35/10/1777/5134064" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[310]. Lei Xu, Xiaoqin Ding, Tianhu Wang, Shanzhi Mou, Huiyong Sun*, Tingjun Hou*, Voltage-gated sodium channels：structures, functions and molecular modeling,&nbsp;<em style="box-sizing: border-box;">Drug Discovery Today</em>, 2019, 24, 1389-1397. [<a href="https://www.sciencedirect.com/science/article/pii/S1359644618304483" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[309]. Tianli Xie, Jie Yu, Weitao Fu, Zhe Wang, Lei Xu, Shan Chang, Ercheng Wang, Feng Zhu, Su Zeng, Yu Kang*, Tingjun Hou*, Insight into the selective binding mechanism of DNMT1 and DNMT3A inhibitors: a molecular simulation study,&nbsp;<em style="box-sizing: border-box;">Physical Chemistry Chemical Physics</em>, 2019, 21, 12931-12947. [<a href="https://pubs.rsc.org/en/content/articlehtml/2019/cp/c9cp02024a" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[308]. Tingyang Wang, Ping Song, Tingting Zhong, Xianjun Wang, Xuepeng Xiang, Qian Liu, Haiyi Chen, Tian Xia, Hong Liu, Yumiao Liu, Yanshi Hu, Lei Xu, Lijun Zhu, Hongyan Qi, Jing Shen, Tingjun Hou, Riccardo Fodde, Jimin Shao, The inflammatory cytokine IL-6 induces FRA1 deacetylation promoting colorectal cancer stem-like properties,&nbsp;<em style="box-sizing: border-box;">Oncogene</em>, 2019, 38, 4932-4947. [<a href="https://www.nature.com/articles/s41388-019-0763-0" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[307]. Ye Jin, Mojie Duan, Xuwen Wang, Xiaotian Kong, Wenfang Zhou, Huiyong Sun, Hui Liu, Dan Li, Huidong Yu, Youyong Li*, Tingjun Hou*, Communication between the ligand-binding pocket (LBP) and the activation function-2 (AF2) domain of androgen receptor revealed by molecular dynamics simulations,&nbsp;<em style="box-sizing: border-box;">Journal of Chemical Information and Modeling</em>, 2019, 59, 842-857. [<a href="https://pubs.acs.org.ccindex.cn/doi/abs/10.1021/acs.jcim.8b00796" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[306]. Haiyi Chen, Weitao Fu, Zhe Wang, Xuwen Wang, Tailong Lei, Feng Zhu, Dan Li, Shan Chang, Lei Xu, Tingjun Hou*, Reliability of docking-based virtual screening for GPCR ligands with homology modeled structures: a case study of angiotensin II type I receptor,&nbsp;<em style="box-sizing: border-box;">ACS Chemical Neuroscience</em>,&nbsp; 2019, 10, 677–689. [<a href="https://pubs.acs.org.ccindex.cn/doi/abs/10.1021/acschemneuro.8b004899" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[305]. Changwei Chen, Peichen Pan, Ziyang Deng, Dahai Wang, Qifan Wu, Lei Xu, Tingjun Hou*, Sunliang Cui*, Discovery of 3, 6-diaryl-1H-pyrazolo [3, 4-b] pyridines as potent anaplastic lymphoma kinase (ALK) inhibitors,&nbsp;<em style="box-sizing: border-box;">Bioorganic &amp; Medicinal Chemistry Letters</em>,&nbsp; 2019, 29, 012-916. [<a href="https://www.sciencedirect.com/science/article/pii/S0960894X19300587" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[304]. Qixing Chen, Yang Yang, Jinchao Hou, Qiang Shu, Yixuan Yin, Weitao Fu, Feng Han, Tingjun Hou, Congli Zeng, Elizabeta Nemeth, Rose Linzmeier, Tomas Ganz, Xiangming Fang, Increased gene copy number of DEFA1/DEFA3 worsens sepsis by inducing endothelial pyroptosis,&nbsp;<em style="box-sizing: border-box;">Proceedings of the National Academy of Sciences</em>,&nbsp; 2019, 116, 3161-3170. [<a href="https://www.pnas.org/content/116/8/3161" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[303]. Haili Liu, Huilong Dong, Yujin Ji, Lu Wang, Tingjun Hou, Youyong Li, The adsorption, diffusion and capacity of lithium on novel boron-doped graphene nanoribbon: A density functional theory study,&nbsp;<em style="box-sizing: border-box;">Applied Surface Science</em>,&nbsp; 2019, 466, 737-745. [<a href="https://www.sciencedirect.com/science/article/pii/S0169433218328630" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[302]. Wenfang Zhou, Mojie Duan, Weitao Fu, Jinping Pang, Qin Tang, Huiyong Sun, Lei Xu, Shan Chang, Dan Li*, Tingjun Hou*, Discovery of Novel Androgen Receptor Ligands by Structure-based Virtual Screening and Bioassays,&nbsp;<em style="box-sizing: border-box;">Genomics, Proteomics &amp; Bioinformatics</em>,&nbsp;2019, 16, 416-427. [<a href="https://www.sciencedirect.com/science/article/pii/S1672022919300014" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><h4 style="box-sizing: border-box; font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-weight: 500; line-height: 1.1; color: rgb(51, 51, 51); margin-top: 10px; margin-bottom: 10px; font-size: 18px; white-space: normal; background-color: rgb(255, 255, 255);"><span style="box-sizing: border-box; font-weight: 700;">2018年</span></h4><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[301]. Peichen Pan, Jiean Chen, Xijian Li, Miyang Li, Huidong Yu, Jean J Zhao, Jing Ni, Xuwen Wang, Huiyong Sun, Sheng Tian, Feng Zhu, Feng Liu, Yong Huang*, Tingjun Hou*, Structure-based Drug Design and Identification of H2O-soluble and Low Toxic Hexacyclic Camptothecin Derivatives with Improved Efficacy in both Cancer and Lethal Inflammation Models In Vivo,&nbsp;<em style="box-sizing: border-box;">Journal of Medicinal Chemistry</em>,&nbsp;2018, 61,8613–8624. [<a href="https://dx.doi.org/10.1021/acs.jmedchem.8b00498" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[300]. Cheng Liu, Huilong Dong, Yujin Ji, Tingjun Hou, Youyong Li, Origin of the catalytic activity of phosphorus doped MoS 2 for oxygen reduction reaction (ORR) in alkaline solution: a theoretical study,&nbsp;<em style="box-sizing: border-box;">Scientific Reports</em>,&nbsp;2018, 8, 13292. [<a href="https://www.nature.com/articles/s41598-018-31354-0" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[299]. Na Liu, Wenfang Zhou, Yue Guo, Junmei Wang, Weitao Fu, Huiyong Sun, Dan Li, Mojie Duan*, Tingjun Hou*, Molecular Dynamics Simulations Revealed the Regulation of Ligands to the Interactions between Androgen Receptor and Its Coactivator,&nbsp;<em style="box-sizing: border-box;">Journal of Chemical Information and Modeling</em>,&nbsp;2018, 58, 1652-1661. [<a href="https://pubs.acs.org/doi/10.1021/acs.jcim.8b00283" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[298]. Fu Chen, Huiyong Sun, Junmei Wang, Feng Zhu, Hui Liu, Zhe Wang, Tailong Lei, Youyong Li, Tingjun Hou*, Assessing the performance of MM/PBSA and MM/GBSA methods. 8. Predicting binding free energies and poses of protein-RNA complexes,&nbsp;<em style="box-sizing: border-box;">RNA</em>,&nbsp;2018, 24, 1183-1194. [<a href="http://www.rnajournal.org/cgi/pmidlookup?view=long&pmid=29930024" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[297]. Yin Yu, Huiyong Sun, Tingjun Hou, Suidong Wang, Youyong Li, Fullerene derivatives act as inhibitors of leukocyte common antigen based on molecular dynamics simulations,&nbsp;<em style="box-sizing: border-box;">&nbsp;RSC advances</em>,&nbsp;2018, 8, 13997-14008. [<a href="http://pubs.rsc.org/en/content/articlehtml/2018/ra/c7ra13543b" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[296]. Jun Shang, Ben Hu, Junmei Wang, Feng Zhu, Yu Kang, Dan Li, Huiyong Sun, De-Xin Kong, Tingjun Hou*, Cheminformatic Insight into the Differences between Terrestrial and Marine Originated Natural Products,&nbsp;<em style="box-sizing: border-box;">Journal of Chemical Information and Modeling</em>,&nbsp;2018, 58, 1182-1193. [<a href="https://pubs.acs.org/doi/10.1021/acs.jcim.8b00125" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[295]. Huiyong Sun, Lili Duan, Fu Chen, Hui Liu, Zhe Wang, Peichen Pan, Feng Zhu, John Z. H. Zhang, Tingjun Hou*, Assessing the performance of MM/PBSA and MM/GBSA methods. 7. Entropy effects on the performance of end-point binding free energy calculation approaches,&nbsp;<em style="box-sizing: border-box;">Phys. Chem. Chem. Phys.</em>,&nbsp;2018, 20, 14450-14460. [<a href="http://pubs.rsc.org/en/content/articlelanding/2018/cp/c7cp07623a#!divAbstract" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[294]. Zhiyu Zhang, Rong Zhang, Linlang Li, Lijun Zhu, Shiyuan Gao, Qiran Lu, Yihui Gu, Yu Zhang, Huicui Yang, Tingjun Hou, Xuechu Zhen, Long Tai Zheng, Macrophage migration inhibitory factor (MIF) inhibitor, Z-590 suppresses cartilage destruction in adjuvant-induced arthritis via inhibition of macrophage inflammatory activation,&nbsp;<em style="box-sizing: border-box;">Immunopharmacology and Immunotoxicology</em>,&nbsp;2018, 40, 149-157. [<a href="http://www.tandfonline.com/doi/full/10.1080/08923973.2018.1424896" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[293]. Zhe Wang, Yu Kang, Dan Li, Huiyong Sun, Xiaowu Dong, Xiaojun Yao, Lei Xu, Shan Chang, Youyong Li, Tingjun Hou*, Benchmark Study Based on 2P2IDB to Gain Insights into the Discovery of Small-Molecule PPI Inhibitors,&nbsp;<em style="box-sizing: border-box;">The Journal of Physical Chemistry B</em>,&nbsp;2018, 122, 2544-2555. [<a href="https://pubs.acs.org/doi/abs/10.1021/acs.jpcb.7b12658" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[292]. Xiaotian Kong, Huiyong Sun, Peichen Pan, Feng Zhu, Shan Chang, Lei Xu, Youyong Li, Tingjun Hou*, Importance of protein flexibility in molecular recognition: a case study on Type-I1/2 inhibitors of ALK,&nbsp;<em style="box-sizing: border-box;">Physical Chemistry Chemical Physics</em>,&nbsp;2018, 20, 4851-4863. [<a href="http://pubs.rsc.org/en/content/articlehtml/2018/cp/c7cp08241j" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[291]. Yujin Ji, Mingye Yang, Haiping Lin, Tingjun Hou, Lu Wang, Youyong Li, Shuit-Tong Lee, Janus Structures of Transition Metal Dichalcogenides as the Heterojunction Photocatalysts for Water Splitting,&nbsp;<em style="box-sizing: border-box;">Journal of Physical Chemistry C</em>,&nbsp;2018, 122, 3123-3129. [<a href="http://pubs.acs.org/doi/abs/10.1021/acs.jpcc.7b11584" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[290]. Yujin Ji, Huilong Dong, Tingjun Hou, Youyong Li, Monolayer graphitic germanium carbide (g-GeC): the promising cathode catalyst for fuel cell and lithium-oxygen battery applications,&nbsp;<em style="box-sizing: border-box;">Journal of Materials Chemistry A</em>,&nbsp;2018, 6, 2212-2218. [<a href="http://pubs.rsc.org/en/content/articlehtml/2018/ta/c7ta10118j" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[288]. Huilong Dong, Yujin Ji, Tingjun Hou, Youyong Li, Two-dimensional siligraphenes as cathode catalysts for nonaqueous lithium-oxygen batteries,&nbsp;<em style="box-sizing: border-box;">Carbon</em>,&nbsp; 2018, 126, 580-587. [<a href="https://www.sciencedirect.com/science/article/pii/S0008622317310758" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><h4 style="box-sizing: border-box; font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; font-weight: 500; line-height: 1.1; color: rgb(51, 51, 51); margin-top: 10px; margin-bottom: 10px; font-size: 18px; white-space: normal; background-color: rgb(255, 255, 255);"><span style="box-sizing: border-box; font-weight: 700;">2017年</span></h4><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[287]. Ting Feng, Fu Chen, Yu Kang, Huiyong Sun, Hui Liu, Dan Li, Feng Zhu, Tingjun Hou*, HawkRank: a new scoring function for protein-protein docking based on weighted energy terms,&nbsp;<em style="box-sizing: border-box;">Journal of Cheminformatics</em>,&nbsp;2017, 9, 66. [<a href="https://link.springer.com/article/10.1186/s13321-017-0254-7" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[286]. Peichen Pan, Huidong Yu, Qinglan Liu, Xiaotian Kong, Hu Chen, Jiean Chen, Qi Liu, Dan Li, Yu Kang, Huiyong Sun, Wenfang Zhou, Sheng Tian, Sunliang Cui, Feng Zhu, Youyong Li, Yong Huang*, Tingjun Hou*, Combating drug-resistant mutants of ALK with potent and selective Type-I1/2 inhibitors by stabilizing unique DFG-shifted loop conformation,&nbsp;<em style="box-sizing: border-box;">ACS Central Science</em>,&nbsp;2017, 3, 1208-1220. [<a href="http://pubs.acs.org/doi/abs/10.1021/acscentsci.7b00419" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[285]. Tailong Lei, Huiyong Sun, Yu Kang, Feng Zhu. Hui Liu, Wenfang Zhou, Zhe Wang, Dan Li, Youyong Li, Tingjun Hou*, ADMET evaluation in drug discovery. 18. Reliable prediction of chemical-induced urinary tract toxicity by boosting machine learning approaches,&nbsp;<em style="box-sizing: border-box;">Molecular Pharmaceutics</em>,&nbsp;2017, 14, 3935-3953. [<a href="http://pubs.acs.org/doi/abs/10.1021/acs.molpharmaceut.7b00631" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[284]. Tailong Lei, Fu Chen, Hui Liu, Huiyong Sun, Yu Kang, Dan Li, Youyong Li, Tingjun Hou*, ADMET evaluation in drug discovery. 17. Development of quantitative and qualitative prediction models for chemical-induced respiratory toxicity,&nbsp;<em style="box-sizing: border-box;">Molecular Pharmaceutics</em>,&nbsp;2017, 14, 2407-2421. [<a href="http://pubs.acs.org/doi/abs/10.1021/acs.molpharmaceut.7b00317" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[283]. Huiyong Sun, Youyong Li, Mingyun Shen, Dan Li, Yu Kang. Tingjun Hou*, Characterizing drug-target residence time with metadynamics: how to achieve dissociation rate efficiently without losing accuracy against much time-consuming approaches,&nbsp;<em style="box-sizing: border-box;">Journal of Chemical Information and Modeling</em>,&nbsp;2017, 57, 1895-1906. [<a href="http://pubs.acs.org/doi/abs/10.1021/acs.jcim.7b00075" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[282]. Sheng Tian, Xu Wang, Linlang Li, Xiaohu Zhang, Youyong Li, Feng Zhu, Tingjun Hou*, Xuechu Zhen*, Discovery of novel and selective adenosine A2A receptor antagonists for treating parkinson&#39;s disease through comparative structure-based virtual screening,&nbsp;<em style="box-sizing: border-box;">Journal of Chemical Information and Modeling</em>,&nbsp;2017, 57, 1474-1487. [<a href="http://pubs.acs.org/doi/abs/10.1021/acs.jcim.7b00188" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[281]. Xiaotian Kong, Huiyong Sun, Peichen Pan, Dan Li, Feng Zhu, Shan Chang, Lei Xu, Youyong Li*, and Tingjun Hou*, How Does the L884P Mutation Confer Resistance to Type-II Inhibitors of JAK2 Kinase: A Comprehensive Molecular Modeling Study,&nbsp;<em style="box-sizing: border-box;">Scientific Reports</em>,&nbsp;2017, 7, 9088. [<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5567357/" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[280]. Shang Li, Nana Ai, Mingyun Shen, Yuanye Dang, Cheong-Meng Chong, Peichen Pan, Yiu Wa Kwan, Shun Wan Chan, George Pak Heng Leung, Maggie Pui Man Hoi, Tingjun Hou*, Simon Ming-Yuen Lee*, Discovery of a ROCK inhibitor, FPND, which prevents cerebral hemorrhage through maintaining vascular integrity by interference with VE-cadherin,&nbsp;<em style="box-sizing: border-box;">Cell Death Discovery</em>,&nbsp;2017, 3, 17051. [<a href="https://search.proquest.com/docview/1930422990?pq-origsite=gscholar" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[279]. Yujin Ji, Huilong Dong, Mingye Yang, Tingjun Hou, Youyong Li, Monolayer germanium monochalcogenides (GeS/GeSe) as cathode catalysts in nonaqueous Li-O2 batteries,&nbsp;<em style="box-sizing: border-box;">Physical Chemistry Chemical Physics</em>,&nbsp;2017, 19, 20457 - 20462. [<a href="http://pubs.rsc.org/-/content/articlehtml/2017/cp/c7cp04044j" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[278]. Yi Yu, Huiyong Sun, Keith Gilmore, Tingjun Hou, Sui-Dong Wang, Youyong Li, Aggregated single-walled carbon nanotubes absorbs and deforms dopamine-related proteins based on molecular dynamics simulations,&nbsp;<em style="box-sizing: border-box;">ACS Applied Materials &amp; Interfaces</em>,&nbsp;2017, 9, 32452-32462. [<a href="http://pubs.acs.org/doi/abs/10.1021/acsami.7b05478" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[277]. Zhaoran Wang, Huilong Dong, Xiaohui Yu, Yujin Ji, Tingjun Hou, Youyong Li, Two-dimensional porous polyphthalocyanine (PPc) as an efficient gas-separation membrane for ammonia synthesis,&nbsp;<em style="box-sizing: border-box;">Current Applied Physics</em>,&nbsp;2017, 17, 1765-1770. [<a href="http://www.sciencedirect.com/science/article/pii/S1567173917302377" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[276]. Huilong Dong, Yujin Ji, Tingjun Hou, Youyong Li, Two-dimensional siligraphenes as cathode catalysts for nonaqueous lithium-oxygen batteries,&nbsp;<em style="box-sizing: border-box;">Carbon</em>,&nbsp;2018, 126: 580-587. [<a href="http://www.sciencedirect.com/science/article/pii/S0008622317310758" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[275]. Jun Shang, Huiyong Sun, Hui Liu, Fu Chen, Sheng Tian, Peichen Pan, Dan Li, Dexin Kong*, Tingjun Hou*, Comparative analyses of structural features and scaffold diversity for purchasable compound libraries,&nbsp;<em style="box-sizing: border-box;">Journal of Cheminformatics</em>,&nbsp;2017, 9, 25. [<a href="https://jcheminf.springeropen.com/articles/10.1186/s13321-017-0212-4" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[274]. Hui Liu, Fu Chen, Huiyong Sun, Dan Li, Tingjun Hou*, Improving the efficiency of non-equilibrium sampling in the aqueous environment via implicit-solvent simulations,&nbsp;<em style="box-sizing: border-box;">Journal of Chemical Theory and Computation</em>,&nbsp;2017, 13, 1827-1836. [<a href="http://pubs.acs.org/doi/abs/10.1021/acs.jctc.6b01139" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[273]. Fu Chen, Huiyong Sun, Hui Liu, Dan Li, Youyong Li, Tingjun Hou*, Predicition of luciferase inhibitors by high-performance MIEC-GBDT approach based on interaction energetic patterns,&nbsp;<em style="box-sizing: border-box;">Physical Chemistry Chemical Physics</em>,&nbsp;2017, 19, 10163-10176. [<a href="http://pubs.rsc.org/is/content/articlehtml/2017/cp/c6cp08232g" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[272]. Ren Kong, Lei Xu, Lianhua Piao, Dawei Zhang, Tingjun Hou and Shan Chang, Exploring the RNA‐bound and RNA‐free human argonaute-2 by molecular dynamics simulation method,&nbsp;<em style="box-sizing: border-box;">Chemical Biology &amp; Drug Design</em>,&nbsp;2017, 90, 753-763. [<a href="http://onlinelibrary.wiley.com/doi/10.1111/cbdd.12997/full" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[271]. Liming Li, Min Han, Xinchi Jiang, Xianzhen Yin, Fu Chen, Tianyuan Zhang, Hao Ren, Jiwen Zhang, Tingjun Hou, Zhong Chen, Hongwei Ouyang, Yasuhiko Tabata, Youqing Shen, Jianqing Gao, Peptide-tethered hydrogel scaffold promotes recovery from spinal cord transection via synergism with mesenchymal stem cells,&nbsp;<em style="box-sizing: border-box;">ACS Applied Materials &amp; Interfaces</em>,&nbsp;2017, 9, 3330-3342. [<a href="http://pubs.acs.org/doi/abs/10.1021/acsami.6b12829" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[270]. Mingye Yang, Lu Wang, Tingjun Hou, Youyong Li, Controlling of the electronic properties of WS2 and graphene oxide heterostructures from first-principles calculations,&nbsp;<em style="box-sizing: border-box;">Journal Materials Chemistry C</em>,&nbsp;2017, 5, 201-207. [<a href="http://pubs.rsc.org/en/Content/ArticleLanding/2017/TC/C6TC04487E#!divAbstract" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; font-size: 16px;">[269]. Yujin Ji, Mingye Yang, Huilong Dong, Tingjun Hou, Lu Wang, Youyong Li, Two-dimensional germanium monochalcogenide photocatalyst for water splitting under ultraviolet, visible to near-infrared light,&nbsp;<em style="box-sizing: border-box;">Nanoscale</em>, 2017, 9, 8608-8615.&nbsp;<span style="box-sizing: border-box;text-decoration:underline;">(Back Cover Story)</span>&nbsp;[<a href="http://pubs.rsc.org/en/Content/ArticleLanding/2017/NR/C7NR00688H#!divAbstract" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p><img alt="" class="media-object" src="/upload/1/cms/content/editor/1622196671679.png" style="box-sizing: border-box; border: 0px; vertical-align: middle; display: block;"/></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[268]. Yunxia Liu, Krisztian Palotas, Xiao Yuan, Tingjun Hou, Haiping Lin, Youyong Li, Shuit-Tong Lee, Atomistic origins of surface defects in CH3NH3PbBr3 perovskite and their electronic structures,&nbsp;<em style="box-sizing: border-box;">ACS Nano</em>,&nbsp;2017, 11, 2060-2065. [<a href="http://pubs.acs.org/doi/abs/10.1021/acsnano.6b08260" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[267]. Yujin Ji, Mingye Yang, Huilong Dong, Lu Wang, Tingjun Hou, Youyong Li, Monolayer group IVAmonochalcogenides as potential and efficient catalysts for oxygen reduction reaction from the first-principles calculations,&nbsp;<em style="box-sizing: border-box;">Journal of Materials Chemistry A</em>,&nbsp;2017, 5, 1743-1741. [<a href="http://pubs.rsc.org/is/content/articlehtml/2016/ta/c6ta08321h" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Heiti SC&quot;, &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);">[266]. Huilong Dong, Lu Wang, Liujiang Zhou, Tingjun Hou, Youyong Li, Theoretical investigations on novel SiC5 siligraphene as gas sensor for air pollutants,&nbsp;<em style="box-sizing: border-box;">Carbon</em>, 2017, 113, 114-121. [<a href="http://www.sciencedirect.com/science/article/pii/S0008622316310028" target="_blank" style="box-sizing: border-box; background-color: transparent; color: rgb(51, 122, 183); text-decoration-line: none; font-size: 15px;">HTML</a>]</p><p><br/></p> </span>
+      </div>
+     </div>
+    </div>
+   </div>
+<!--<div class="ms-footer"> -->
+<!-- <div class="body"> -->
+<!--  <div class="top"> -->
+<!--   <div class="top-left">-->
+<!--      -->
+<!--    <div class="foot-nav"> -->
+<!--     <a href="http://localhost:8080/html/web/tuanduijieshao/index.html" class="nav-item"> 团队介绍 </a>  -->
+<!--    </div>  -->
+<!--    <div class="foot-nav"> -->
+<!--     <a href="http://localhost:8080/html/web/keyanxiangmu/index.html" class="nav-item"> 科研项目 </a>  -->
+<!--     <div> -->
+<!--      <a href="http://localhost:8080/html/web/keyanxiangmu/zongxiangkeyan/index.html" class="item"> 纵向科研 </a> -->
+<!--     </div>  -->
+<!--     <div> -->
+<!--      <a href="http://localhost:8080/html/web/keyanxiangmu/hengxiangkeyan/index.html" class="item"> 横向科研 </a> -->
+<!--     </div>  -->
+<!--    </div>  -->
+<!--    <div class="foot-nav"> -->
+<!--     <a href="http://localhost:8080/html/web/lunwenzhuzuo/index.html" class="nav-item"> 论文著作 </a>  -->
+<!--     <div> -->
+<!--      <a href="http://localhost:8080/html/web/lunwenzhuzuo/papers/index.html" class="item"> 论文著作 </a> -->
+<!--     </div>  -->
+<!--     <div> -->
+<!--      <a href="http://localhost:8080/html/web/lunwenzhuzuo/ruanjianzhuozuoquan/index.html" class="item"> 软件著作权 </a> -->
+<!--     </div>  -->
+<!--     <div> -->
+<!--      <a href="http://localhost:8080/html/web/lunwenzhuzuo/famingzhuanli/index.html" class="item"> 发明专利 </a> -->
+<!--     </div>  -->
+<!--    </div>  -->
+<!--    <div class="foot-nav"> -->
+<!--     <a href="http://localhost:8080/html/web/tuanduidongtai/index.html" class="nav-item"> 团队动态 </a>  -->
+<!--    </div>  -->
+<!--    <div class="foot-nav"> -->
+<!--     <a href="http://localhost:8080/html/web/tuanduichengyuan/index.html" class="nav-item"> 团队成员 </a>  -->
+<!--    </div>  -->
+<!--    <div class="foot-nav"> -->
+<!--     <a href="http://localhost:8080/html/web/lianxiwomen1398269395334127618/index.html" class="nav-item"> 联系我们 </a>  -->
+<!--    </div>  -->
+<!--   </div> -->
+<!--   <div class="top-right"> -->
+<!--    <div class="qr"> -->
+<!--     <img title="" alt="" src="http://localhost:8080/template/1/default/images/sw.png" class="pic">-->
+<!--     <span class="text"> 商务微信 </span>-->
+<!--    </div> -->
+<!--    <div class="qr"> -->
+<!--     <img title="" alt="" src="http://localhost:8080/template/1/default/images/gzh.png" class="pic">-->
+<!--     <span class="text"> 公众号 </span> -->
+<!--    </div> -->
+<!--   </div> -->
+<!--  </div> -->
+<!--  <span class="copyright"> <el-link href="https://www.mingsoft.net/" type="primary">© 江西铭软科技有限公司</el-link> 2012-至今 All Rights Reserved. Powered by MCms </span>-->
+<!--  <span class="power"> @该网页由 <el-link href="https://designer.mingsoft.net/" type="primary">MDesigner</el-link> 制作完成 </span>-->
+<!-- </div> -->
+<!--</div>-->
+
+
+<div class="ms-footer" style="width: 100%;margin: 0 auto;background-color: #55557f;padding-bottom: 0;height: 20px;">
+ <div class="body">
+
+  <div class="row" style="width: 100%;margin: 0 auto;;padding-bottom: 0;">
+   <p style="text-align: center;color: whitesmoke;padding-bottom: 0;line-height: 10px;vertical-align: middle;margin-top: 5px;">Copyright © 2021-2022 课题组网站 </p>
+  </div>
+  <!--<div class="top">
+   <div class="top-left">
+    <div class="foot-nav">
+     <a href="http://localhost:8080/html/web/tuanduijieshao/index.html" class="nav-item"> 团队介绍 </a> 
+    </div>     <div class="foot-nav">
+     <a href="http://localhost:8080/html/web/keyanxiangmu/index.html" class="nav-item"> 科研项目 </a> 
+     <div>
+      <a href="http://localhost:8080/html/web/keyanxiangmu/zongxiangkeyan/index.html" class="item"> 纵向科研 </a>
+     </div> 
+     <div>
+      <a href="http://localhost:8080/html/web/keyanxiangmu/hengxiangkeyan/index.html" class="item"> 横向科研 </a>
+     </div> 
+    </div>     <div class="foot-nav">
+     <a href="http://localhost:8080/html/web/lunwenzhuzuo/index.html" class="nav-item"> 论文著作 </a> 
+     <div>
+      <a href="http://localhost:8080/html/web/lunwenzhuzuo/papers/index.html" class="item"> 论文著作 </a>
+     </div> 
+     <div>
+      <a href="http://localhost:8080/html/web/lunwenzhuzuo/ruanjianzhuozuoquan/index.html" class="item"> 软件著作权 </a>
+     </div> 
+     <div>
+      <a href="http://localhost:8080/html/web/lunwenzhuzuo/famingzhuanli/index.html" class="item"> 发明专利 </a>
+     </div> 
+    </div>     <div class="foot-nav">
+     <a href="http://localhost:8080/html/web/tuanduidongtai/index.html" class="nav-item"> 团队动态 </a> 
+    </div>     <div class="foot-nav">
+     <a href="http://localhost:8080/html/web/tuanduichengyuan/index.html" class="nav-item"> 团队成员 </a> 
+    </div>     <div class="foot-nav">
+     <a href="http://localhost:8080/html/web/lianxiwomen1398269395334127618/index.html" class="nav-item"> 联系我们 </a> 
+    </div> 
+   </div>
+   <div class="top-right">
+    <div class="qr">
+     <img title="" alt="" src="http://localhost:8080/template/1/default/images/sw.png" class="pic">
+     <span class="text"> 商务微信 </span>
+    </div>
+    <div class="qr">
+     <img title="" alt="" src="http://localhost:8080/template/1/default/images/gzh.png" class="pic">
+     <span class="text"> 公众号 </span>
+    </div>
+   </div>
+  </div>
+  <span class="copyright"> <el-link href="https://www.mingsoft.net/" type="primary">© 江西铭软科技有限公司</el-link> 2012-至今 All Rights Reserved. Powered by MCms </span>
+  <span class="power"> @该网页由 <el-link href="https://designer.mingsoft.net/" type="primary">MDesigner</el-link> 制作完成 </span>-->
+ </div>
+</div>  </div>
+  <script>
+var app = new Vue({
+    el: '#app',
+    watch:{
+    },
+    data: {
+    },
+    methods: {
+       switchShow:function(arr){
+       var that = this
+           arr.forEach(function(x){
+              let e = that.$el.querySelector("#key_"+x)
+               if(e){
+                   e.style.display=e.style.display=='none'?'flex':'none'
+               }
+           })
+       },
+    },
+    created(){
+    }
+})
+</script>
+  <style>
+    body {
+        background-color:#fff;
+        box-sizing:border-box;
+        font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Segoe UI", "Helvetica Neue", "PingFang SC", "Noto Sans", "Noto Sans CJK SC", "Microsoft YaHei", 微软雅黑, sans-serif;
+        moz-box-sizing:border-box;
+        webkit-box-sizing:border-box;
+    }
+
+    .news
+    {
+            align-items:flex-start;
+            flex-direction:row;
+            display:flex;
+            padding-right:0px;
+            box-sizing:border-box;
+            justify-content:center;
+            padding-bottom:0px;
+            flex-wrap:nowrap;
+            width:100%;
+            margin-bottom:0px;
+            padding-top:0px;
+            padding-left:0px;
+            margin-top:0px;
+    }
+    .news .body
+    {
+            padding-bottom:20px;
+            flex-wrap:nowrap;
+            flex-direction:row;
+            display:flex;
+            padding-right:0px;
+            width:1200px;
+            box-sizing:border-box;
+            padding-top:20px;
+            padding-left:0px;
+    }
+    .news .body .left
+    {
+            padding-bottom:0px;
+            flex-wrap:nowrap;
+            flex-direction:column;
+            display:flex;
+            padding-right:0px;
+            width:200px;
+            box-sizing:border-box;
+            padding-top:0px;
+            padding-left:0px;
+            margin-top:0px;
+            height:100%;
+    }
+    .news .body .left .title
+    {
+            border-bottom-color:#C0C4CC;
+            color:#C0C4CC;
+            flex-direction:row;
+            word-wrap:break-word;
+            display:inline-block;
+            font-size:16PX;
+            border-bottom-style:dashed;
+            padding-top:10px;
+            border-bottom-width:1px;
+            padding-left:10px;
+            margin-top:0px;
+            height:40px;
+    }
+    .news .body .left .sub-title-sel
+    {
+            background-color:#F2F6FC;
+            color:#409EFF;
+            flex-direction:row;
+            word-wrap:break-word;
+            display:inline-block;
+            font-size:16PX;
+            padding-top:10px;
+            padding-left:10px;
+            margin-top:2px;
+            height:40px;
+    }
+    .news .body .left .sub-title
+    {
+            color:#5F5F5F;
+            flex-direction:row;
+            word-wrap:break-word;
+            display:inline-block;
+            font-size:16PX;
+            padding-top:10px;
+            padding-left:10px;
+            margin-top:0px;
+            height:40px;
+    }
+    .news .body .right
+    {
+            padding-bottom:0px;
+            flex-wrap:nowrap;
+            flex-direction:column;
+            display:flex;
+            padding-right:0px;
+            width:1000px;
+            margin-bottom:0px;
+            box-sizing:border-box;
+            padding-top:0px;
+            padding-left:20px;
+            margin-top:0px;
+            height:100%;
+    }
+    .news .body .right .ms-channel-path
+    {
+            margin-right:auto;
+            align-items:center;
+            flex-wrap:nowrap;
+            flex-direction:row;
+            display:flex;
+            width:100%;
+            margin-bottom:10px;
+            box-sizing:border-box;
+            padding-left:0px;
+            margin-top:10px;
+            height:30px;
+            margin-left:auto;
+    }
+    .news .body .right .ms-channel-path span
+    {
+            color:#909399;
+            flex-direction:row;
+            word-wrap:break-word;
+            display:inline-block;
+            font-size:16PX;
+    }
+    .news .body .right .ms-channel-path .ms-channel-path-index
+    {
+            cursor:pointer;
+            color:#000;
+            font-size:16PX;
+            text-decoration:none;
+            margin-bottom:0px;
+            margin-top:0px;
+    }
+    .news .body .right .ms-channel-path >i
+    {
+    }
+    .news .body .right .ms-channel-path .ms-channel-path-link
+    {
+            cursor:pointer;
+            color:#000;
+            font-size:16PX;
+            text-decoration:none;
+            margin-bottom:0px;
+            margin-top:0px;
+    }
+    .news .body .right .big-title
+    {
+            text-align:center;
+            flex-direction:row;
+            word-wrap:break-word;
+            display:inline-block;
+            font-size:22PX;
+            margin-bottom:20px;
+            padding-left:0px;
+            margin-top:10px;
+    }
+    .news .body .right .news-body
+    {
+            flex-direction:column;
+            display:flex;
+            box-sizing:border-box;
+            margin-left:0px;
+            margin-right:0px;
+            min-height:500px;
+            padding-bottom:0px;
+            flex-wrap:nowrap;
+            width:100%;
+            margin-bottom:0px;
+            padding-top:0px;
+            padding-left:0px;
+            margin-top:0px;
+    }
+    .news .body .right .news-body span
+    {
+            flex-direction:row;
+            word-wrap:break-word;
+            display:inline-block;
+            font-size:14px;
+    }
+@media (max-width: 768px){
+        .news
+        {
+                align-items:center;
+                flex-direction:row;
+                display:flex;
+                padding-right:0px;
+                box-sizing:border-box;
+                justify-content:center;
+                padding-bottom:0px;
+                flex-wrap:nowrap;
+                width:100%;
+                margin-bottom:0px;
+                padding-top:0px;
+                padding-left:0px;
+                margin-top:0px;
+        }
+        .news .body
+        {
+                padding-bottom:20px;
+                flex-wrap:nowrap;
+                flex-direction:column;
+                display:flex;
+                padding-right:0px;
+                width:90%;
+                box-sizing:border-box;
+                padding-top:20px;
+                padding-left:0px;
+        }
+
+ .news .body .left {
+  width: 100%;
+ }
+        .news .body .right
+        {
+                padding-bottom:0px;
+                flex-wrap:nowrap;
+                flex-direction:column;
+                display:flex;
+                padding-right:0px;
+                width:100%;
+                margin-bottom:0px;
+                box-sizing:border-box;
+                padding-top:0px;
+                padding-left:0px;
+                margin-top:0px;
+        }
+        .news .body .right .ms-channel-path
+        {
+                align-items:center;
+                flex-direction:row;
+                display:flex;
+                box-sizing:border-box;
+                margin-left:auto;
+                margin-right:auto;
+                flex-wrap:nowrap;
+                width:100%;
+                margin-bottom:10px;
+                padding-top:0px;
+                padding-left:0px;
+                margin-top:10px;
+                height:30px;
+        }
+        .news .body .right .ms-channel-path span
+        {
+                flex-direction:row;
+                word-wrap:break-word;
+                display:inline-block;
+                font-size:14PX;
+        }
+        .news .body .right .ms-channel-path .ms-channel-path-index
+        {
+                cursor:pointer;
+                color:#000;
+                font-size:14PX;
+                text-decoration:none;
+                margin-bottom:0px;
+                margin-top:0px;
+        }
+        .news .body .right .ms-channel-path .ms-channel-path-link
+        {
+                cursor:pointer;
+                color:#000;
+                font-size:14PX;
+                text-decoration:none;
+                margin-bottom:0px;
+                margin-top:0px;
+        }
+        .news .body .right .big-title
+        {
+                flex-direction:row;
+                word-wrap:break-word;
+                display:inline-block;
+                font-size:22PX;
+                padding-left:0px;
+        }
+        .news .body .right .news-body
+        {
+                margin-right:0px;
+                padding-bottom:0px;
+                flex-wrap:nowrap;
+                flex-direction:column;
+                display:flex;
+                width:100%;
+                box-sizing:border-box;
+                margin-bottom:0px;
+                padding-top:0px;
+                margin-top:0px;
+                margin-left:0px;
+        }
+
+}</style>
+ </body>
+</html>

@@ -1,0 +1,403 @@
+.animation, .underlay-text span, .main-title, .content, .card-team::after, .card-team__logo, .card-team__number, .card-team__name {
+  animation-fill-mode: both;
+  animation-duration: 1.25s;
+  animation-play-state: running;
+  animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
+}
+
+@keyframes scalewidth-zero-half {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(0.5);
+  }
+}
+@keyframes slide-up {
+  0% {
+    transform: translateY(100vh);
+  }
+  100% {
+    transform: translateY(0vh);
+  }
+}
+@keyframes slide-up-text-offset {
+  0% {
+    transform: translateY(112.5%);
+  }
+  100% {
+    transform: translateY(12.5%);
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slide-up-fade-in {
+  0% {
+    transform: translateY(3.5vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  /* background-color: #4c4c4c; */
+  /* background-color: #2C3E50 ; */
+  /* background-image: url(../img/bg1.jpg)); */
+  /* background: url(../img/bg5.png); */
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0.9;
+  color: #fff;
+  letter-spacing: 0.1em;
+  font-family: Raleway;
+  overflow-x: hidden;
+}
+
+a {
+  color: #ff352c;
+  text-decoration: none;
+}
+
+.allcaps, .underlay-text, .main-title, .card-team__name {
+  /*text-transform: uppercase;*/
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.separator {
+  display: inline-block;
+  vertical-align: middle;
+  width: 2em;
+  height: 0.05em;
+  background-color: #fff;
+  opacity: 0.15;
+  margin: 0 0.5em;
+}
+
+.underline-bar, .main-title::after, .card-team__number::after {
+  content: '';
+  position: absolute;
+  bottom: -1em;
+  left: 0;
+  width: 100%;
+  height: 0.075em;
+  background-color: #ff2416;
+}
+
+.icon-dropdown {
+  border: 0.35em solid transparent;
+  border-top: 0.35em solid #fff;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 0.5em;
+}
+
+
+body.container{
+	width: 100%;
+	margin-left: 0;
+	padding-left: 0;
+	margin-right: 0;
+	padding-right: 0;
+	
+}
+/*------------------------------
+  Main
+------------------------------*/
+header {
+  display: flex;
+  justify-content: space-between;
+  /* max-width: 85em; */
+  margin: 0 auto;
+  padding: 1em;
+  
+}
+header a {
+  color: #fff;
+}
+
+.logo {
+  height: 1.3em;
+  width: 5.2em;
+}
+.logo svg {
+  transform: scale(0.15);
+  transform-origin: top left;
+}
+.logo path {
+  fill: #ff2416;
+}
+
+.share {
+  font-size: 0.9em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+.share a {
+  padding: 0.5em;
+  vertical-align: middle;
+}
+.share .twitter {
+  font-size: 1.1em;
+}
+
+main {
+  position: relative;
+
+}
+
+.underlay-text {
+  position: absolute;
+  left: 50%;
+  top: 1rem;
+  font-family: Teko;
+  font-size: 18vw;
+  font-weight: 700;
+  letter-spacing: 0;
+  white-space: nowrap;
+  opacity: 0.2;
+  transform: translateX(-50%) translateY(-22.5%) scaleX(0.75) scaleY(1.1);
+  pointer-events: none;
+  overflow: hidden;
+  line-height: 0.65;
+  color: red;
+}
+.underlay-text span {
+  display: inline-block;
+  position: relative;
+  animation-name: slide-up-text-offset;
+  animation-delay: 0.4s;
+}
+
+.page-container {
+  font-size: 2rem;
+  /* max-width: 75em; */
+  margin: 1em auto;	
+  height: auto;
+  padding-top: 2em;
+  opacity: 0.8;
+}
+
+.main-title {
+  position: relative;
+  display: inline-block;
+  font-size: 1.35em;
+  color: black;
+  margin-bottom: 1em;
+  animation-name: slide-up;
+  width: 100%;
+  justify-content: center;            
+          align-items: center;
+		  /* background-color: pink; */
+		  text-align: left;
+}
+
+.content {
+  position: relative;
+  background-color: #fff;
+  color: #2e2e2e;
+  animation-name: slide-up;
+  animation-delay: 0.15s;
+  text-align: center;
+  margin: 0 auto;
+  justify-content: center;
+  width: 80%;
+  
+}
+
+.grid {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  
+}
+
+.card {
+  position: relative;
+  display: flex;
+  /* width: 33.333%; */
+  font-size: 1.5rem;
+  flex-flow: column;
+  justify-content: center;
+  
+}
+
+.card-team {
+  padding: 3em;
+  align-items: center;
+  position: relative;
+  border: 1px solid #f5f5f5;
+  cursor: pointer;
+}
+.card-team::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.2em;
+  background-color: #ff2416;
+  transform: scaleX(0.5);
+  animation-name: scalewidth-zero-half;
+}
+.card-team__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-color: #292d4a;
+  /* background-image: url(../img/neu.png); */
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 0.5em 3em rgba(16, 16, 30, 0.4);
+  opacity: 0;
+  transition: 1s cubic-bezier(0.8, 0, 0.2, 1);
+  z-index: 1;
+}
+.card-team__logo {
+  position: relative;
+  color: #a3aaad;
+  /* margin: 1em 1em 1em; */
+  transition: 1s cubic-bezier(0.8, 0, 0.2, 1);
+  z-index: 1;
+  animation-name: slide-up-fade-in;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.7s;
+}
+.card-team__logo .fas {
+  /* font-size: 3em; */
+}
+.card-team__number {
+  position: relative;
+  display: inline-block;
+  font-family: Teko;
+  color: #ff352c;
+  font-size: 2em;
+  margin-bottom: 1em;
+  transform: scaleX(0.7);
+  font-weight: 600;
+  transition: 1s cubic-bezier(0.8, 0, 0.2, 1);
+  z-index: 1;
+  animation-name: slide-up-fade-in;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.7s;
+}
+.card-team__number::after {
+  background-color: #d6dde0;
+  height: 0.05em;
+  width: 75%;
+  left: 12.5%;
+  bottom: -0.2em;
+}
+.card-team__name {
+  position: relative;
+  font-size: 1.5em;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #2e2e2e;
+  transition: 1s cubic-bezier(0.8, 0, 0.2, 1);
+  z-index: 1;
+  animation-name: slide-up-fade-in;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.7s;
+}
+.card-team:hover .card-team__bg {
+  opacity: 1;
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+.card-team:hover .card-team__logo,
+.card-team:hover .card-team__number,
+.card-team:hover .card-team__name {
+  color: #fff;
+}
+
+/* .card-team:nth-child(1) .card-team__logo,
+.card-team:nth-child(1) .card-team__number,
+.card-team:nth-child(1) .card-team__name {
+  animation-delay: 1.025s;
+}
+.card-team:nth-child(1)::after {
+  animation-delay: 1.2428571429s;
+}
+
+.card-team:nth-child(2) .card-team__logo,
+.card-team:nth-child(2) .card-team__number,
+.card-team:nth-child(2) .card-team__name {
+  animation-delay: 1.15s;
+}
+.card-team:nth-child(2)::after {
+  animation-delay: 1.3857142857s;
+}
+
+.card-team:nth-child(3) .card-team__logo,
+.card-team:nth-child(3) .card-team__number,
+.card-team:nth-child(3) .card-team__name {
+  animation-delay: 1.275s;
+}
+.card-team:nth-child(3)::after {
+  animation-delay: 1.5285714286s;
+}
+
+.card-team:nth-child(4) .card-team__logo,
+.card-team:nth-child(4) .card-team__number,
+.card-team:nth-child(4) .card-team__name {
+  animation-delay: 1.4s;
+}
+.card-team:nth-child(4)::after {
+  animation-delay: 1.6714285714s;
+}
+
+.card-team:nth-child(5) .card-team__logo,
+.card-team:nth-child(5) .card-team__number,
+.card-team:nth-child(5) .card-team__name {
+  animation-delay: 1.525s;
+}
+.card-team:nth-child(5)::after {
+  animation-delay: 1.8142857143s;
+}
+
+.card-team:nth-child(6) .card-team__logo,
+.card-team:nth-child(6) .card-team__number,
+.card-team:nth-child(6) .card-team__name {
+  animation-delay: 1.65s;
+}
+.card-team:nth-child(6)::after {
+  animation-delay: 1.9571428571s;
+}
+
+.card-team:nth-child(7) .card-team__logo,
+.card-team:nth-child(7) .card-team__number,
+.card-team:nth-child(7) .card-team__name {
+  animation-delay: 1.775s;
+}
+.card-team:nth-child(7)::after {
+  animation-delay: 2.1s;
+}
+
+.card-team:nth-child(8) .card-team__logo,
+.card-team:nth-child(8) .card-team__number,
+.card-team:nth-child(8) .card-team__name {
+  animation-delay: 1.9s;
+}
+.card-team:nth-child(8)::after {
+  animation-delay: 2.2428571429s;
+}
+ */
