@@ -121,7 +121,9 @@
 }
 
 .ms-nav .body .nav-item .sel{
-    color: #409EFF;
+    /*color: #409EFF;*/
+    color: white;
+    font-weight: bolder;
 }
 
 .ms-nav .body .nav-search {
@@ -474,7 +476,8 @@
     }
 
     .ms-nav .body .nav-h5 .nav-h5-body {
-        background-color: #F2F6FC;
+        /*background-color: #F2F6FC;*/
+        background-color: #e6e6e6;
         flex-direction: column;
         display: none;
         box-sizing: border-box;
@@ -493,7 +496,9 @@
 
     .ms-nav .body .nav-h5 .nav-h5-body .nav-h5-item {
         cursor: pointer;
-        color: #303133;
+        color: ghostwhite;
+        /*color: #303133;*/
+
         flex-direction: row;
         word-wrap: break-word;
         display: inline-block;
@@ -503,7 +508,12 @@
         padding-left: 0px;
         height: 40px;
     }
-
+.ms-nav  a{
+    color: ghostwhite;
+}
+.nav-item a{
+    color: black;
+}
     .ms-nav .body .nav-item {
         align-items: center;
         flex-wrap: nowrap;

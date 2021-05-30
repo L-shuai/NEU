@@ -162,9 +162,10 @@ main {
 .underlay-text {
   position: absolute;
   left: 50%;
-  top: 1rem;
+  top: 0.2em;
+  /*margin-top: 500px;*/
   font-family: Teko;
-  font-size: 18vw;
+  font-size: 22vw;
   font-weight: 700;
   letter-spacing: 0;
   white-space: nowrap;
@@ -187,7 +188,7 @@ main {
   /* max-width: 75em; */
   margin: 1em auto;	
   height: auto;
-  padding-top: 2em;
+  padding-top: 4.5em;
   opacity: 0.8;
 }
 
@@ -300,6 +301,7 @@ main {
   animation-duration: 0.7s;
 }
 .card-team__number::after {
+  /*background-color: #d6dde0;*/
   background-color: #d6dde0;
   height: 0.05em;
   width: 75%;
