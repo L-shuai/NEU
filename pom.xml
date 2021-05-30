@@ -15,7 +15,7 @@
     <!-- 打包war包 -->
     <!--    <packaging>war</packaging>-->
     <properties>
-        <java.version>1.8</java.version>
+        <java.version>1.1</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <repositories>
@@ -97,29 +97,29 @@
                     <executable>true</executable>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
-                <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                    <encoding>${project.build.sourceEncoding}</encoding>
-                    <showDeprecation>true</showDeprecation>
-                    <showWarnings>true</showWarnings>
-                    <compilerArguments>
-                        <verbose/>
-                        <bootclasspath>${java.home}/lib/rt.jar${path.separator}${java.home}/lib/jce.jar</bootclasspath>
-                    </compilerArguments>
-                </configuration>
-<!--                <dependencies>-->
-<!--                    <dependency>-->
-<!--                        <groupId>org.codehaus.plexus</groupId>-->
-<!--                        <artifactId>plexus-compiler-eclipse</artifactId>-->
-<!--                        <version>2.1</version>-->
-<!--                    </dependency>-->
-<!--                </dependencies>-->
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-compiler-plugin</artifactId>-->
+<!--                <version>3.8.1</version>-->
+<!--                <configuration>-->
+<!--                    <source>${java.version}</source>-->
+<!--                    <target>${java.version}</target>-->
+<!--                    <encoding>${project.build.sourceEncoding}</encoding>-->
+<!--                    <showDeprecation>true</showDeprecation>-->
+<!--                    <showWarnings>true</showWarnings>-->
+<!--                    <compilerArguments>-->
+<!--                        <verbose/>-->
+<!--                        <bootclasspath>${java.home}/lib/rt.jar;${path.separator}${java.home}/lib/jce.jar</bootclasspath>-->
+<!--                    </compilerArguments>-->
+<!--                </configuration>-->
+<!--&lt;!&ndash;                <dependencies>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <groupId>org.codehaus.plexus</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <artifactId>plexus-compiler-eclipse</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <version>2.1</version>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;                </dependencies>&ndash;&gt;-->
+<!--            </plugin>-->
         </plugins>
         <defaultGoal>compile</defaultGoal>
     </build>
